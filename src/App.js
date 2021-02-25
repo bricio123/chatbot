@@ -1,32 +1,28 @@
-import React, { useState } from "react";
-import "./App.css";
-import { Chatbot } from "react-chatbot-kit";
+import React from "react";
+import "./GlobalStyles.css";
+import Dashboard from "./components/Pages/Dashboard/Dashboard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Patricia from "./components/BotOne/BotOne";
+import Purpose from './components/Pages/Purpose/Purpose';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+  BrowserRouter,
+} from "react-router-dom";
+import Home from "./components/Pages/Home/Home";
 
-import MessageParser from "./MessageParser";
-import ActionProvider from "./ActionProvider";
-import config from "./config";
-
-import {} from "react-router-dom";
 function App() {
-  const [showBot, toggleBot] = useState(false);
-
-  const saveMessages = (messages) => {
-    localStorage.setItem("chat_messages", JSON.stringify(messages));
-  };
-
-  const loadMessages = () => {
-    const messages = JSON.parse(localStorage.getItem("chat_messages"));
-    return messages;
-  };
   return (
-    <div className="App-header">
-      <Chatbot
-        className="chat"
-        config={config}
-        actionProvider={ActionProvider}
-        messageParser={MessageParser}
-      />
-    </div>
+    <BrowserRouter>
+      <Route path="/" exact component={Home} />
+      <Route path="/Dashboard"component={Dashboard} />
+      <Route path="/Patricia" component={Patricia} />
+      <Route path="/Purpose" component={Purpose} />
+    </BrowserRouter>
   );
 }
 

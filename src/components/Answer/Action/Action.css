@@ -1,0 +1,14 @@
+.Link_container{
+ display: flex;
+ align-items: center;
+ justify-content: center;   
+}
+.Link_container a{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+img{
+    width: 50%;
+    height: 100%;
+}

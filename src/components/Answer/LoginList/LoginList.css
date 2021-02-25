@@ -1,0 +1,16 @@
+ul {
+  color: #000;
+}
+.list_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.list_container h3 {
+  font-weight: bold;    
+}
+.list_container img {
+  width: 100%;
+  flex-shrink: 0;
+}

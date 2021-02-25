@@ -1,11 +1,29 @@
-img{
-    width: 50px;
-    height: 50px;
-    border-radius: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:16px; 
-    margin-right: 15px;
-    background-color: red;
+@import '../../GlobalStyles.css';
+
+.chat__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden !important;
+}
+.react-chatbot-kit-chat-container {
+  width: 80% !important;
+  border-radius: 10px;
+}
+
+.react-chatbot-kit-chat-input {
+  outline: none !important;
+}
+.react-chatbot-kit-chat-message-container {
+  display: flex;
+
+  flex-direction: column;
+}
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar{
+  overflow: hidden;
+}
+.react-chatbot-kit-chat-bot-message{
+  margin-left: 0 !important;
 }

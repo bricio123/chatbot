@@ -1,11 +1,23 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-export default function Dashboard() {
+import "../Dashboard/Dashboard.css";
+import Documents from "../../Documents/Documents";
+import "../../BotPatricia/BotPatricia";
+import BotPatricia from "../../BotOne/BotOne";
+import ChatbotList from "../../ChatbotList/ChatbotList";
+import { Link } from "react-router-dom";
+import NavbarAll from "../../Navbar/Navbar";
+
+
+const Dashboard = () => {
   return (
-    <div>
-      <Link to="/App">
-        <button>Voltar</button>
-      </Link>
-    </div>
+    <>
+      <div className="Container__dashboard">
+        <ChatbotList />
+        <BotPatricia />
+        <Documents />
+      </div>
+    </>
   );
-}
+};
+
+export default Dashboard;

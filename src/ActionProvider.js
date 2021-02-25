@@ -1,32 +1,36 @@
 class ActionProvider {
-  // The action provider receives createChatBotMessage which you can use to define the bots response, and
-  // the setState function that allows for manipulating the bots internal state.
   constructor(createChatBotMessage, setStateFunc, createClientMessage) {
     this.createChatBotMessage = createChatBotMessage;
     this.setState = setStateFunc;
     this.createClientMessage = createClientMessage;
   }
-
+  handleMessageLinks = () => {
+    const messages = this.createChatBotMessage("Aqui esta o link do dialer", {
+      widget: "Links",
+      withAvatar: true,
+    });
+    this.addMessageToBotState(messages);
+  }
   handleMessageParser = () => {
-    const messages = this.createChatBotMessage("Ola",{
-      widget: "overview",     
+    const messages = this.createChatBotMessage("Olá, qual é sua duvida?", {
+      widget: "presentation",
       withAvatar: true,
     });
 
     this.addMessageToBotState(messages);
   };
-  handleMessageMask = () => {
-    const messages = this.createChatBotMessage("Não tem mascara?",{
-      widget: "mask",
-      withAvatar: false,
+  handleMessageSheet = () => {
+    const messages = this.createChatBotMessage("temos uma planilha com o usuario e senha de todos", {
+      widget: "loginList",
+      withAvatar: true,
     });
 
     this.addMessageToBotState(messages);
   };
 
   handleDefault = () => {
-    const message = this.createChatBotMessage("Como eu posso te ajudar?", {
-      withAvatar: false,
+    const message = this.createChatBotMessage("Não entendi", {
+      withAvatar: true,
     });
 
     this.addMessageToBotState(message);

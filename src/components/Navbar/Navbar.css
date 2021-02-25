@@ -1,0 +1,18 @@
+.navbar_container{
+  grid-area: SN;
+  z-index: 999;
+  height: 50px;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+
+}
+a {
+  color: #000 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+a:hover,
+:focus {
+  color: rgba(0, 0, 0, 0.507) !important;
+}

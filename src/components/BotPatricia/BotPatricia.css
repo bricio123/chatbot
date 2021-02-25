@@ -1,0 +1,14 @@
+.patricia {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+  
+}
+.patricia__container {
+  width: 40px;
+  height: 40px;
+}
+.react-chatbot-kit-chat-bot-avatar-letter {
+  margin: 0;
+}
