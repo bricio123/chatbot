@@ -12,9 +12,9 @@
   background: var(--senary);
   width: 100%;
   overflow-x: hidden;
-
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-
 .react-chatbot-kit-chat-inner-container {
   width: 100% !important;
   background-color: var(--quinary);

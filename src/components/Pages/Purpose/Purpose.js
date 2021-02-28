@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Button } from "react-bootstrap";
-import NavbarAll from "../../Navbar/Navbar";
+
 import Patricia from "../../BotPatricia/BotPatricia";
 import "./Purpose.css";
 import Quality from "../../../assets/quality.svg";
@@ -16,7 +16,7 @@ import {
 const Purpose = () => {
   return (
     <div className="bots_container">
-      <NavbarAll />
+      
       <div className="container__purpose">
         <section>
           <h2>O que esperar de nós?</h2>

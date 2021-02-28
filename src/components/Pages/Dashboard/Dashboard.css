@@ -1,4 +1,4 @@
 .Container__dashboard {
   display: grid;
-  grid-template-columns: 100px auto 240px;
+  grid-template-columns: 80px  250px  auto 240px;
 }

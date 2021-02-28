@@ -18,10 +18,10 @@ input {
 :root {
   --primary: #36393f;
   --secondary: #2f3136;
-  --tertiary: rgb(32, 34, 37);
+  --tertiary: #303136;
   --quaternary: #292b2f;
-  --quinary: #393d42;
-  --senary: #828386;
+  --quinary: #363940;
+  --senary: #212226;
 
   --white: #fff;
   --gray: #8a8c90;

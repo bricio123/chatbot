@@ -5,13 +5,10 @@ import { Chatbot } from "react-chatbot-kit";
 import MessageParser from "../../MessageParser";
 import ActionProvider from "../../ActionProvider";
 import config from "../../config";
-import Navbar from "../Navbar/Navbar";
 
 const BotOne = () => {
- 
   return (
     <>
-
       <div className="chat__container">
         <Chatbot
           className="chat"
