@@ -3,7 +3,7 @@ import "./Services.css";
 import { Link } from "react-router-dom";
 import BotPatricia from "../BotPatricia/BotPatricia";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSortDown } from "@fortawesome/free-solid-svg-icons";
+import { faCogs, faHammer, faBug, faEyeDropper } from "@fortawesome/free-solid-svg-icons";
 import {
   Dropdown,
   Button,
@@ -13,22 +13,40 @@ import {
 } from "react-bootstrap";
 
 const Services = () => {
-  function option() {}
   return (
     <>
       <div className="Services__container">
         <div className="nav-top">
           <span>Serviços</span>
           <DropdownButton
-          className='button-option'
+            className="button-option outline"
             menuAlign="right"
             id="dropdown-menu-align-right"
           >
-            <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-            <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+            <div className="options">
+              <div className="options__select">
+                <p>Configuração</p>
+
+                <FontAwesomeIcon icon={faCogs} />
+              </div>
+            
+              <div eventKey="2" className="options__select">
+                <p>Moldar um bot</p>
+
+                <FontAwesomeIcon icon={faHammer} />
+              </div>
+              <div eventKey="3" className="options__select">
+                <p>Reportar Bugs</p>
+
+                <FontAwesomeIcon icon={faBug} />
+              </div>
+              <divder />
+              <div eventKey="4"  className="options__select">
+                <p>Alterar cor</p>
+
+                <FontAwesomeIcon icon={faEyeDropper} />
+              </div>
+            </div>
           </DropdownButton>
         </div>
       </div>
