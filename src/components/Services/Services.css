@@ -23,9 +23,8 @@
   box-shadow: 0px 1px 20px 0px var(--primaryColor);
   background-color: var(--primaryColor) !important;
 }
-.options{
+.options {
   color: var(--white);
-
 }
 .button__options {
   margin: 10px;
@@ -35,21 +34,25 @@
 }
 .options__select {
   display: flex;
-  padding: 5px;
+  padding: 1rem;
   align-items: center;
   justify-content: space-between;
   color: var(--white) !important;
-  margin: 0 5px !important;
-  transition: .5s all ease;
+
+  transition: 0.5s all ease;
 }
-.options__select:hover{
+.options__select:hover {
   background: var(--symbol);
   border-radius: 4px;
+  margin: 0 5px;
 }
-.options__select p{
-  margin: 0;
+.options__select:active {
+  background: var(--symbol) !important;
 }
-
+.options__select p {
+  margin-bottom:5px 0 !important ;
+  font-size: 13px;
+}
 
 .button-option {
   margin: 0 5px;
@@ -60,4 +63,69 @@
   border: none !important;
 }
 
+/*parte do conhecer agora*/
 
+.now-bots {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.now-bots img {
+  margin: 20px;
+}
+.now-bots p {
+  color: var(--white);
+  text-align: center;
+  font-size: 13px;
+}
+.button__go__now {
+  width: 200px;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--mention-detail);
+  transition: background-color 0.5s;
+}
+.button__go__now:hover {
+  background-color: var(--symbol);
+}
+
+/*lista de erros frequêntes*/
+
+.bots__list__err {
+  color: var(--white);
+}
+.bots__list__err p{
+  font-size: 14px;
+  margin: 10px;
+}
+.list__err {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: var(--white);
+  margin: 5px;
+}
+.list__err li {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  border-radius: 5px;
+  margin: 5px;
+  transition: 0.5s ease all;
+}
+.list__err li p {
+  font-size: 12px;
+
+}
+.list__err li:hover {
+ 
+  
+  
+  background: var(--mention-detail);
+}

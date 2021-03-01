@@ -33,18 +33,7 @@ const ChatbosList = () => {
             <div>
               <BotPatricia />
             </div>
-            <div>
-              {" "}
-              <BotPatricia />
-            </div>
-            <div>
-              {" "}
-              <BotPatricia />
-            </div>
-            <div>
-              {" "}
-              <BotPatricia />
-            </div>
+           
           </div>
         </section>
       </div>
