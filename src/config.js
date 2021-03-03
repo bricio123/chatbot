@@ -1,12 +1,13 @@
 import React from "react";
 import { createChatBotMessage } from "react-chatbot-kit";
 
-import Presention from './components/Answer/presentation/presentation';
+import Presention from "./components/Answer/presentation/presentation";
 import MessageParser from "./MessageParser";
 import ActionProvider from "./ActionProvider";
 import LoginList from "./components/Answer/LoginList/LoginList";
-import Links from './components/Answer/Action/Action';
-
+import Links from "./components/Answer/Action/Action";
+import Headseat from "./components/Answer/Headseat/Headseat";
+import "./GlobalStyles.css";
 const botName = "Patricia";
 
 const config = {
@@ -14,7 +15,7 @@ const config = {
   lang: "PT",
   customStyles: {
     botMessageBox: {
-      backgroundColor: "#0ea700", 
+      backgroundColor: "var(--link)",
     },
     chatButton: {
       backgroundColor: "#0ea700",
@@ -22,7 +23,7 @@ const config = {
   },
   initialMessages: [
     createChatBotMessage(
-      `Prazer, meu desenvolvedor está me aperfeiçoando, sou á primeira versão, então me desculpe se eu não enteder algumas frases, peço para que fale em poucas palavras`
+      `Prazer, meu desenvolvedor está me aperfeiçoando, sou a primeira versão, então  tenha paciência se eu não enteder algumas frases,fale em poucas palavras a sua dúvida`
     ),
   ],
   state: {
@@ -53,6 +54,11 @@ const config = {
     {
       widgetName: "actionProvider",
       widgetFunc: (props) => <ActionProvider {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
+      widgetName: "Headseat",
+      widgetFunc: (props) => <Headseat {...props} />,
       mapStateToProps: ["gist"],
     },
   ],

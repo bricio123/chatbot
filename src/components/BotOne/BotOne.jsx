@@ -6,6 +6,10 @@ import MessageParser from "../../MessageParser";
 import ActionProvider from "../../ActionProvider";
 import config from "../../config";
 
+import Documents from "../../components/Documents/Documents";
+import Services from "../../components/Services/Services";
+import ChatbotList from "../../components/ChatbotList/ChatbotList";
+
 const BotOne = () => {
   return (
     <>

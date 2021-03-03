@@ -11,6 +11,9 @@ class MessageParser {
       lowerCase.includes("quero o link do dialer") ||
       lowerCase.includes("como acesso o dialer") ||
       lowerCase.includes("commpeak") ||
+      lowerCase.includes("onde esta o dialer") ||
+      lowerCase.includes("onde posso acessar o dialer") ||
+      lowerCase.includes("acessar o dialer") ||
       lowerCase.includes("onde esta") ||
       lowerCase.includes("dialer")
     )
@@ -23,7 +26,7 @@ class MessageParser {
       lowerCase.includes("tudo bem") ||
       lowerCase.includes("bem") ||
       lowerCase.includes("como vai") ||
-      lowerCase.includes("como") || 
+      lowerCase.includes("como") ||
       lowerCase.includes("fala") ||
       lowerCase.includes("como voce esta") ||
       lowerCase.includes("vai") ||
@@ -59,7 +62,7 @@ class MessageParser {
         "eu nao sei como achar o login de um usuario no dialer"
       ) ||
       lowerCase.includes("logar") ||
-      lowerCase.includes("listas")||
+      lowerCase.includes("listas") ||
       lowerCase.includes("nao sei como eu faço para logar") ||
       lowerCase.includes("onde fica o dialer") ||
       lowerCase.includes("quero logar no dialer") ||
@@ -73,7 +76,7 @@ class MessageParser {
       lowerCase.includes(" quero saber onde eu acho as senhas do dialer") ||
       lowerCase.includes("quero saber como acho as senhas do dialer")
     )
-      return this.actionProvider.handleMessageSheet();
+      return this.actionProvider.handleMessageFiles();
     if (
       lowerCase.includes("nao encontrei o nome do agente na planilha") ||
       lowerCase.includes("nao tem o nome do agente na planilha") ||
@@ -91,6 +94,33 @@ class MessageParser {
       lowerCase.includes("como")
     ) {
       return this.actionProvider.createChatBotMessage();
+    }
+    if (
+      lowerCase.includes("headseat") ||
+      lowerCase.includes("fone") ||
+      lowerCase.includes("configuracão do fone") ||
+      lowerCase.includes("como arrumar o fone") ||
+      lowerCase.includes("como concertar o fone") ||
+      lowerCase.includes("quero configurar o fone") ||
+      lowerCase.includes("onde fica a configuração dos headseat") ||
+      lowerCase.includes("filetron") ||
+      lowerCase.includes("headseat") ||
+      lowerCase.includes("headseat") ||
+      lowerCase.includes("headseat") ||
+      lowerCase.includes("headseat")
+    ) {
+      return this.actionProvider.handleMessageHeadseat();
+    }
+    if (
+      lowerCase.includes("login não esta correto") ||
+      lowerCase.includes("nao consigo logar") ||
+      lowerCase.includes("onde eu consigo os logins de cada um") ||
+      lowerCase.includes("login") ||
+      lowerCase.includes("quero logar ") ||
+      lowerCase.includes("login não esta correto") ||
+      lowerCase.includes("login não esta correto")
+    ) {
+      return this.actionProvider.handleMessageFiles();
     }
     return this.actionProvider.handleDefault();
   };

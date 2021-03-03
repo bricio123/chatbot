@@ -4,13 +4,17 @@ class ActionProvider {
     this.setState = setStateFunc;
     this.createClientMessage = createClientMessage;
   }
+
+  //função que responde com uma imagem com o link do dialer
   handleMessageLinks = () => {
     const messages = this.createChatBotMessage("Aqui esta o link do dialer", {
       widget: "Links",
       withAvatar: true,
     });
     this.addMessageToBotState(messages);
-  }
+  };
+
+  //função que se apreseta e da uma previa de erros recorrentes
   handleMessageParser = () => {
     const messages = this.createChatBotMessage("Olá, qual é sua duvida?", {
       widget: "presentation",
@@ -19,11 +23,26 @@ class ActionProvider {
 
     this.addMessageToBotState(messages);
   };
-  handleMessageSheet = () => {
-    const messages = this.createChatBotMessage("temos uma planilha com o usuario e senha de todos", {
-      widget: "loginList",
-      withAvatar: true,
-    });
+  //função que
+  handleMessageFiles = () => {
+    const messages = this.createChatBotMessage(
+      "Saiba que temos uma seção com os aquivos mais utilizado por nós click e baixe a planilha com os logins",
+      {
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
+
+  handleMessageHeadseat = () => {
+    const messages = this.createChatBotMessage(
+      "Se o audio e o microfone não estiverem funcionando, veja as configuraçãos a seguir",
+      {
+        widget: "Headseat",
+        withAvatar: true,
+      }
+    );
 
     this.addMessageToBotState(messages);
   };

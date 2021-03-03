@@ -1,4 +1,4 @@
-@import '../../GlobalStyles.css';
+@import "../../GlobalStyles.css";
 
 .chat__container {
   width: 100%;
@@ -21,9 +21,9 @@
 
   flex-direction: column;
 }
-.react-chatbot-kit-chat-message-container::-webkit-scrollbar{
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar {
   overflow: hidden;
 }
-.react-chatbot-kit-chat-bot-message{
+.react-chatbot-kit-chat-bot-message {
   margin-left: 0 !important;
 }

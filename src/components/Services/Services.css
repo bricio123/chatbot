@@ -38,8 +38,10 @@
   align-items: center;
   justify-content: space-between;
   color: var(--white) !important;
-
   transition: 0.5s all ease;
+}
+.options__select p{
+  margin: 0;
 }
 .options__select:hover {
   background: var(--symbol);
@@ -50,7 +52,7 @@
   background: var(--symbol) !important;
 }
 .options__select p {
-  margin-bottom:5px 0 !important ;
+  margin-bottom: 5px 0 !important ;
   font-size: 13px;
 }
 
@@ -92,40 +94,3 @@
   background-color: var(--symbol);
 }
 
-/*lista de erros frequêntes*/
-
-.bots__list__err {
-  color: var(--white);
-}
-.bots__list__err p{
-  font-size: 14px;
-  margin: 10px;
-}
-.list__err {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  color: var(--white);
-  margin: 5px;
-}
-.list__err li {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- 
-  border-radius: 5px;
-  margin: 5px;
-  transition: 0.5s ease all;
-}
-.list__err li p {
-  font-size: 12px;
-
-}
-.list__err li:hover {
- 
-  
-  
-  background: var(--mention-detail);
-}
