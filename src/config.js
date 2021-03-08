@@ -4,10 +4,12 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import Presention from "./components/Answer/presentation/presentation";
 import MessageParser from "./MessageParser";
 import ActionProvider from "./ActionProvider";
+import ClickClean from "./components/Answer/ClickClean/ClickClean";
 import LoginList from "./components/Answer/LoginList/LoginList";
 import Links from "./components/Answer/Action/Action";
 import Headseat from "./components/Answer/Headseat/Headseat";
 import "./GlobalStyles.css";
+
 const botName = "Patricia";
 
 const config = {
@@ -31,6 +33,15 @@ const config = {
   },
   customComponents: {},
   widgets: [
+    {
+      widgetName: "clickclean",
+      widgetFunc: (props) => <ClickClean {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
+      widgetName: "latencia",
+      mapStateToProps: ["gist"],
+    },
     {
       widgetName: "Links",
       widgetFunc: (props) => <Links {...props} />,
@@ -57,7 +68,7 @@ const config = {
       mapStateToProps: ["gist"],
     },
     {
-      widgetName: "Headseat",
+      widgetName: "headseat",
       widgetFunc: (props) => <Headseat {...props} />,
       mapStateToProps: ["gist"],
     },

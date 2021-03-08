@@ -20,12 +20,13 @@ const popover = (
 );
 const box = (
   <Popover id="popover-basic">
-    <Popover.Title as="h3">Cliente </Popover.Title>
+    <Popover.Title as="h3">Cliente</Popover.Title>
     <Popover.Content>
       <ul className="list_fone">
         <li>1 - Se o cliente nao esculta podemos verificar o dialer</li>
         <li>2 - Caso o navegador esteja com o cache cheio limpe-o</li>
         <li>2 - Use o Click clean</li>
+        <li>2 - feche o navegador</li>
       </ul>
     </Popover.Content>
   </Popover>

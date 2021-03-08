@@ -23,11 +23,24 @@ class ActionProvider {
 
     this.addMessageToBotState(messages);
   };
-  //função que
-  handleMessageFiles = () => {
+  //dialer
+  handleMessageDialerDontWork = () => {
     const messages = this.createChatBotMessage(
-      "Saiba que temos uma seção com os aquivos mais utilizado por nós click e baixe a planilha com os logins",
+      "Nessa situação usamos o Click Clean, para limpar o cache do navegador, aqui está o passo a passo.",
       {
+        widget: "clickclean",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
+
+  handleMessageDialerLatencia = () => {
+    const messages = this.createChatBotMessage(
+      "Dialer nao não entra pode ser ocasionado quando a latência da internet está muito alta Dialer pode não entrar pode ser ocasionado quando o navegador está desatualizado (atualize com o Menu.sh)",
+      {
+        widget: "latencia",
         withAvatar: true,
       }
     );
@@ -39,7 +52,7 @@ class ActionProvider {
     const messages = this.createChatBotMessage(
       "Se o audio e o microfone não estiverem funcionando, veja as configuraçãos a seguir",
       {
-        widget: "Headseat",
+        widget: "headseat",
         withAvatar: true,
       }
     );
@@ -48,11 +61,11 @@ class ActionProvider {
   };
 
   handleDefault = () => {
-    const message = this.createChatBotMessage("Não entendi", {
+    const messages = this.createChatBotMessage("Não entendi", {
       withAvatar: true,
     });
 
-    this.addMessageToBotState(message);
+    this.addMessageToBotState(messages);
   };
 
   addMessageToBotState = (messages) => {

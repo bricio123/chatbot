@@ -1,0 +1,70 @@
+@import "../../../GlobalStyles.css";
+
+.click__container {
+  display: flex;
+ 
+  align-items: center;
+  width: 100%;
+  
+}
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  color:var(--white);
+}
+.desc__one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.desc__one img {
+  padding: 10px;
+  width: 350px;
+  height: 200px;
+}
+.desc__one h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.desc__one p {
+  font-size: 12px;
+  color: #fff;
+}
+.desc__one span {
+  padding: 5px;
+  border-radius: 100%;
+  background-color: var(--notification);
+}
+
+
+
+.desc__two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.desc__two img {
+  padding: 10px;
+  width: 350px;
+  height: 300px;
+}
+.desc__two h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.desc__two p {
+  font-size: 12px;
+  color: #fff;
+}
+.desc__two span {
+  padding: 5px;
+  border-radius: 100%;
+  background-color: var(--green);
+}
