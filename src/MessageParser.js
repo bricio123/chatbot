@@ -9,33 +9,59 @@ class MessageParser {
 
   parse = (message) => {
     const lowerCase = message.toLowerCase();
+   
+
+    if (
+      lowerCase.includes("ola") ||
+      lowerCase.includes("tudo bem") ||
+      lowerCase.includes("preciso de ajuda") ||
+      lowerCase.includes("nao sei com fazer")||
+      lowerCase.includes("estou com duvida")||
+      lowerCase.includes("como fazer")||
+      lowerCase.includes("Boa tarde")||
+      lowerCase.includes("Boa noite")||
+      lowerCase.includes("bom dia")||
+      lowerCase.includes("oi")
+    ) {
+      return this.actionProvider.handleMessageParser();
+    }
+
     if (
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
-      lowerCase.includes("dialer não entra ") ||
-      lowerCase.includes("caixa adicional do dialer nao aparece") ||
-      lowerCase.includes("caixa adicional do dialer não conecta  ") ||
-      lowerCase.includes("nao conecta chamada ") ||
-      lowerCase.includes("nao entra na chamada  ") ||
-      lowerCase.includes("não recebo chamadas") ||
-      lowerCase.includes("não escuto barulho de chamadas  ")
+      lowerCase.includes("dialer não entra") ||
+      lowerCase.includes("caixa adicional do dialer nao aparece")||
+      lowerCase.includes("caixa adicional do dialer nao conecta")||
+      lowerCase.includes("nao entra na chamada")||
+      lowerCase.includes("nao recebe chamadas")||
+      lowerCase.includes("dialer nao chama")
     ) {
       return this.actionProvider.handleMessageDialerDontWork();
     }
 
     if (
-      lowerCase.includes("nao conecta chamada") ||
-      lowerCase.includes("nao entra na chamada") ||
-      lowerCase.includes("não recebo chamadas") ||
-      lowerCase.includes("não escuto barulho de chamadas") ||
-      lowerCase.includes("não escuto chamar") ||
-      lowerCase.includes("dialer não liga") ||
-      lowerCase.includes("dialer não deixa fazer call back")
-    ) {
-      return this.actionProvider.handleMessageDialerLatencia();
+      lowerCase.includes("fone") ||
+      lowerCase.includes("headseat")||
+      lowerCase.includes("fone de ouvido")||
+      lowerCase.includes("ouvido")||
+      lowerCase.includes("fone nao ")||
+      lowerCase.includes("nao funciona o fone de ouvido")
+     ) {
+      return this.actionProvider.handleMessageHeadseat();
+    }
+    if (
+      lowerCase.includes("voz do agente demora na hora de falar com o cliente") ||
+      lowerCase.includes("cliente nao consegue ouvir")
+     
+     ) {
+      return this.actionProvider.handleMessageLatencia();
     }
 
-    if (lowerCase.includes("dialer")) {
+    if (
+      lowerCase.includes("dialer") ||
+      lowerCase.includes("onde fica o dialer") ||
+      lowerCase.includes("como acessar o dialer")
+    ) {
       return this.actionProvider.handleMessageLinks();
     }
     return this.actionProvider.handleDefault();

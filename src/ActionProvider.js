@@ -36,9 +36,9 @@ class ActionProvider {
     this.addMessageToBotState(messages);
   };
 
-  handleMessageDialerLatencia = () => {
+  handleMessageLatencia = () => {
     const messages = this.createChatBotMessage(
-      "Dialer nao não entra pode ser ocasionado quando a latência da internet está muito alta Dialer pode não entrar pode ser ocasionado quando o navegador está desatualizado (atualize com o Menu.sh)",
+      "Dialer nao não entra pode ser ocasionado quando a latência da internet está muito alta ou quando o navegador está desatualizado (atualize com o Menu.sh) que esta no arquivos.",
       {
         widget: "latencia",
         withAvatar: true,
@@ -47,6 +47,7 @@ class ActionProvider {
 
     this.addMessageToBotState(messages);
   };
+
 
   handleMessageHeadseat = () => {
     const messages = this.createChatBotMessage(
