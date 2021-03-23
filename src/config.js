@@ -40,6 +40,7 @@ const config = {
     },
     {
       widgetName: "latencia",
+      widgetFunc: (props) => <></>,
       mapStateToProps: ["gist"],
     },
     {

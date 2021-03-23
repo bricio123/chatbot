@@ -1,54 +1,74 @@
 import React, { useRef, useState } from "react";
 import "./Headseat.css";
-import { Button, Popover, OverlayTrigger } from "react-bootstrap";
+import { Button, OverlayTrigger, Modal } from "react-bootstrap";
 
-const popover = (
-  <Popover id="popover-basic">
-    <Popover.Title as="h3">Verificação</Popover.Title>
-    <Popover.Content>
-      <ul className="list_fone">
-        <li>1 - No canto superior a direita temos um auto falante</li>
-        <li>2 - Clicando nele, abrirá uma outra aba, click em saída</li>
-        <li>3 - Temos dois tipos de interface "audio adapter e filetron</li>
-        <li>
-          4 - Escolha uma das duas caso esteja na seleção clicando na bolinha
-        </li>
-        <p>Pronto, faca o teste novamente</p>
-      </ul>
-    </Popover.Content>
-  </Popover>
-);
-const box = (
-  <Popover id="popover-basic">
-    <Popover.Title as="h3">Cliente</Popover.Title>
-    <Popover.Content>
-      <ul className="list_fone">
-        <li>1 - Se o cliente nao esculta podemos verificar o dialer</li>
-        <li>2 - Caso o navegador esteja com o cache cheio limpe-o</li>
-        <li>2 - Use o Click clean</li>
-        <li>2 - feche o navegador</li>
-      </ul>
-    </Popover.Content>
-  </Popover>
-);
+import img_ntc from "../../../assets/tela_ntc.png";
+import img_rasp from "../../../assets/fone/config1.png";
+
+function Example() {
+  const [show, setShow] = useState(false);
+  const [showtwo, setShowtwo] = useState(false);
+
+  const handleCloseTwo = () => setShowtwo(false);
+  const handleShowTwo = () => setShowtwo(true);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <div className="button-option">
+        <Button variant="primary" onClick={handleShow}>
+          NTC
+        </Button>
+        <Button variant="primary" onClick={handleShowTwo}>
+          Raspberry
+        </Button>
+      </div>
+
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header  closeButton>
+          <Modal.Title >Configuração do fone</Modal.Title>
+        </Modal.Header >
+        <Modal.Body className="config__ntc">
+          <p>
+            Vá nas configurações de sons, e na saída coloque na configuração do
+            fone de ouvido, mesmo procedimento para a entrada!
+          </p>
+          <img src={img_ntc} />
+        </Modal.Body>
+      </Modal>
+
+      <Modal
+        show={showtwo}
+        onHide={handleCloseTwo}
+        backdrop="statictwo"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Configuração do fone</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="config__rasp">
+          <p>
+            Vá em preferências de sons, e na aba de saída e de entrada coloque
+            para filetron ou audio adapter
+          </p>
+          <img src={img_rasp} />
+        </Modal.Body>
+      </Modal>
+    </>
+  );
+}
 
 const Headseat = () => {
   return (
     <div className="list_container">
-      <p>Configuração no respberry</p>
-      <div className="grid">
-        <OverlayTrigger trigger="click" placement="top" overlay={popover}>
-          <Button className="box" variant="success">
-            Microfone ou audio{" "}
-          </Button>
-        </OverlayTrigger>
-
-        <OverlayTrigger trigger="click" placement="bottom" overlay={box}>
-          <Button className="box" variant="success">
-            Cliente não esculta
-          </Button>
-        </OverlayTrigger>
-      </div>
+      <Example />
     </div>
   );
 };
