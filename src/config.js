@@ -7,6 +7,7 @@ import ActionProvider from "./ActionProvider";
 import ClickClean from "./components/Answer/ClickClean/ClickClean";
 import LoginList from "./components/Answer/LoginList/LoginList";
 import Links from "./components/Answer/Action/Action";
+import Basetech from "./components/Answer/Basetech/Basetech";
 import Headseat from "./components/Answer/Headseat/Headseat";
 import "./GlobalStyles.css";
 
@@ -66,6 +67,11 @@ const config = {
     {
       widgetName: "actionProvider",
       widgetFunc: (props) => <ActionProvider {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
+      widgetName: "basetech",
+      widgetFunc: (props) => <Basetech {...props} />,
       mapStateToProps: ["gist"],
     },
     {

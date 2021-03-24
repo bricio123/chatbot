@@ -82,6 +82,26 @@ class ActionProvider {
       }));
     }
   };
+
+    
+  handleMessagePassaword = () => {
+    const messages = this.createChatBotMessage(
+      "todas as senhas estao devidamente cadastradas no basetech, caso nao esteja, verifique no arquivo br2",
+      {
+        widget: "basetech",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
+    
+    
+
+
+
+
+
 }
 
 export default ActionProvider;
