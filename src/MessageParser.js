@@ -45,6 +45,18 @@ class MessageParser {
     if (
       lowerCase.includes("nao sei a senha") ||
       lowerCase.includes("senhas") ||
+      lowerCase.includes("senha") ||
+      lowerCase.includes("minhas senhas") ||
+      lowerCase.includes("sem acesso as senhas") ||
+      lowerCase.includes("preciso da minha senha") ||
+      lowerCase.includes("nao sei a senha do dialer") ||
+      lowerCase.includes("eu nao tenho a senha do gwu") ||
+      lowerCase.includes("preciso do link do basetech") ||
+      lowerCase.includes("o que e basetech") ||
+      lowerCase.includes("chat de conversa da empresa") ||
+      lowerCase.includes("preciso do basetech") ||
+      lowerCase.includes("senhas") ||
+      lowerCase.includes("chat") ||
       lowerCase.includes("onde estao as senhas")
     ) {
       return this.actionProvider.handleMessagePassaword()
