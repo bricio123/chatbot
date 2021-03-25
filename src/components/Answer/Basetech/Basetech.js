@@ -1,7 +1,6 @@
 import React from "react";
 import "../Basetech/Basetech.css";
 import { Link } from "react-bootstrap";
-import dialer from "../../../assets/logodialer.webp";
 import Basetech from "../../../assets/basetech/logobasetech.jpeg";
 
 const Links = () => {

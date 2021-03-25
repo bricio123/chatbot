@@ -41,6 +41,24 @@ class MessageParser {
     ) {
       return this.actionProvider.handleMessageDialerDontWork();
     }
+    if (
+      lowerCase.includes("registrar o ponto") ||
+      lowerCase.includes("pontomais") ||
+      lowerCase.includes("ponto")
+    ) {
+      return this.actionProvider.handleMessagePontomais()
+    }
+
+
+     //relacionado ao raspberry
+    if (
+      lowerCase.includes("rasp") ||
+      lowerCase.includes("raspberry") ||
+      lowerCase.includes("berry")
+    ) {
+      return this.actionProvider.handleMessageRaspberry()
+    }
+
     //relacionado as senhas
     if (
       lowerCase.includes("nao sei a senha") ||
@@ -56,6 +74,8 @@ class MessageParser {
       lowerCase.includes("chat de conversa da empresa") ||
       lowerCase.includes("preciso do basetech") ||
       lowerCase.includes("senhas") ||
+      lowerCase.includes("sem senhas") ||
+      lowerCase.includes("sem senha") ||
       lowerCase.includes("chat") ||
       lowerCase.includes("onde estao as senhas")
     ) {
@@ -65,6 +85,7 @@ class MessageParser {
     //relacionado ao fone
     if (
       lowerCase.includes("fone") ||
+      lowerCase.includes("sem som") ||
       lowerCase.includes("headseat")||
       lowerCase.includes("fone de ouvido")||
       lowerCase.includes("ouvido")||
@@ -91,6 +112,12 @@ class MessageParser {
     //relacionado a latencia
     if (
       lowerCase.includes("voz do agente demora na hora de falar com o cliente") ||
+      lowerCase.includes("sem internet") ||
+      lowerCase.includes("sem acesso a internet") ||
+      lowerCase.includes("net esta muito ruim") ||
+      lowerCase.includes("internet") ||
+      lowerCase.includes("sem net") ||
+      lowerCase.includes("sem acesso") ||
       lowerCase.includes("teste") ||
       lowerCase.includes("cliente nao consegue ouvir")
      
