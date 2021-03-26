@@ -116,10 +116,9 @@ class MessageParser {
       lowerCase.includes("sem acesso a internet") ||
       lowerCase.includes("net esta muito ruim") ||
       lowerCase.includes("internet") ||
-      lowerCase.includes("sem net") ||
       lowerCase.includes("sem acesso") ||
       lowerCase.includes("teste") ||
-      lowerCase.includes("cliente nao consegue ouvir")
+      lowerCase.includes("nao carrega pagina")
      
      ) {
       return this.actionProvider.handleMessageLatencia();
