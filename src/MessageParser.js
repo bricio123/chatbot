@@ -28,26 +28,35 @@ class MessageParser {
     ) {
       return this.actionProvider.handleMessageParser();
     }
+
 //relacionado ao dialer
     if (
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer não entra") ||
+      lowerCase.includes("problema no dialer") ||
       lowerCase.includes("caixa adicional do dialer nao aparece")||
       lowerCase.includes("caixa adicional do dialer nao conecta")||
       lowerCase.includes("nao entra na chamada")||
-      lowerCase.includes("nao receb78-000000e chamadas")||
+      lowerCase.includes("nao recebe chamadas")||
       lowerCase.includes("dialer nao chama")
     ) {
       return this.actionProvider.handleMessageDialerDontWork();
     }
-    if (
-      lowerCase.includes("registrar o ponto") ||
-      lowerCase.includes("pontomais") ||
-      lowerCase.includes("ponto")
-    ) {
-      return this.actionProvider.handleMessagePontomais()
-    }
+
+
+
+    
+
+
+
+
+//------------------------------------------------------------------------
+
+
+
+    
+   
 
 
      //relacionado ao raspberry
@@ -127,7 +136,30 @@ class MessageParser {
     if (
       lowerCase.includes("dialer") ||
       lowerCase.includes("onde fica o dialer") ||
-      lowerCase.includes("como acessar o dialer")
+      lowerCase.includes("links importantes") ||
+      lowerCase.includes("links da ti") ||
+      lowerCase.includes("preciso dos links") ||
+      lowerCase.includes("preciso do basetech") ||
+      lowerCase.includes("preciso do ponto") ||
+      lowerCase.includes("preciso do dialer") ||
+      lowerCase.includes("preciso dos links internos") ||
+      lowerCase.includes("basetech") ||
+      lowerCase.includes("preciso entrar no dialer") ||
+      lowerCase.includes("preciso registrar o ponto") ||
+      lowerCase.includes("preciso das senhas") ||
+      lowerCase.includes("preciso do chat") ||
+      lowerCase.includes("senhas") ||
+      lowerCase.includes("senha") ||
+      lowerCase.includes("abrir o dialer") ||
+      lowerCase.includes("abrir basetech") ||
+      lowerCase.includes("link do basetech") ||
+      lowerCase.includes("link do dialer") ||
+      lowerCase.includes("pontomais") ||
+      lowerCase.includes("commpeak dialer") ||
+      lowerCase.includes("commpeak") ||
+      lowerCase.includes("links") ||
+      lowerCase.includes("ponto") ||
+      lowerCase.includes("link do ponto")
     ) {
       return this.actionProvider.handleMessageLinks();
     }

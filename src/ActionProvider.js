@@ -7,7 +7,7 @@ class ActionProvider {
 
   //função que responde com uma imagem com o link do dialer
   handleMessageLinks = () => {
-    const messages = this.createChatBotMessage("Aqui esta o link do dialer", {
+    const messages = this.createChatBotMessage("Aqui esta os links importantes ", {
       widget: "Links",
       withAvatar: true,
     });
@@ -109,17 +109,7 @@ class ActionProvider {
   };
     
 
-  handleMessagePontomais = () => {
-    const messages = this.createChatBotMessage(
-      "aqui você pode registrar o seu ponto!",
-      {
-        widget: "pontomais",
-        withAvatar: true,
-      }
-    );
 
-    this.addMessageToBotState(messages);
-  };
 
 
 
