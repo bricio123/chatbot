@@ -35,6 +35,42 @@ class MessageParser {
       lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer não entra") ||
       lowerCase.includes("problema no dialer") ||
+      lowerCase.includes("problema com o dialer") ||
+      lowerCase.includes("dialer não responde") ||
+      lowerCase.includes("dialer com problema") ||
+      lowerCase.includes("dialer nao responde") ||
+      lowerCase.includes("dialer nao deixa chamar") ||
+      lowerCase.includes("dialer nao esta funcionando corretamente") ||
+      lowerCase.includes("dialer nao esta respondendo como deveria") ||
+      lowerCase.includes("problema na hora de discar") ||
+      lowerCase.includes("problema para fazer ligação no dialer") ||
+      lowerCase.includes("problema para ligar") ||
+      lowerCase.includes("dialer nao esta conectando a chamada") ||
+      lowerCase.includes("dialer nao abre caixa adicional") ||
+      lowerCase.includes("dialer nao esta funcionando") ||
+      lowerCase.includes("dialer nao esta entrando") ||
+      lowerCase.includes("dialer nao conecta") ||
+      lowerCase.includes("dialer nao liga") ||
+      lowerCase.includes("dialer nao aceita chamadas") ||
+      lowerCase.includes("agent nao consegue utilizar o dialer") ||
+      lowerCase.includes("agent nao consegue ligar") ||
+      lowerCase.includes("agent com problema para usar o dialer") ||
+      lowerCase.includes("agent com leads ruins no dialer") ||
+      lowerCase.includes("agent nao consegue completar ligação") ||
+      lowerCase.includes("dialer do agent com problema") ||
+      lowerCase.includes("nao consegue dialer") ||
+      lowerCase.includes("dialer est fora") ||
+      lowerCase.includes("dialer nao entra") ||
+      lowerCase.includes("agent nao consegue usar o dialer") ||
+      lowerCase.includes("agent nao consegue retornar chamadas") ||
+      lowerCase.includes("dialer nao aceita retornar chamadas") ||
+      lowerCase.includes("nao estou conseguindo usar o dialer") ||
+      lowerCase.includes("problema nas chamadas") ||
+      lowerCase.includes("problema para abrir o dialer") ||
+      lowerCase.includes("dialer nao esta funcionando") ||
+      lowerCase.includes("agent nao esta conseguindo ligar") ||
+      lowerCase.includes("problema no callback") ||
+      lowerCase.includes("dialer com problema de callback") ||
       lowerCase.includes("caixa adicional do dialer nao aparece")||
       lowerCase.includes("caixa adicional do dialer nao conecta")||
       lowerCase.includes("nao entra na chamada")||
@@ -66,7 +102,7 @@ class MessageParser {
       lowerCase.includes("berry")
     ) {
       return this.actionProvider.handleMessageRaspberry()
-    }
+    } 
 
     //relacionado as senhas
     if (
@@ -83,6 +119,13 @@ class MessageParser {
       lowerCase.includes("chat de conversa da empresa") ||
       lowerCase.includes("preciso do basetech") ||
       lowerCase.includes("senhas") ||
+      lowerCase.includes("sem senha do dialer") ||
+      lowerCase.includes("sem senha do gwu") ||
+      lowerCase.includes("sem senha do skype") ||
+      lowerCase.includes("sem senha do basetech ") ||
+      lowerCase.includes("sem senha do ") ||
+      lowerCase.includes("sem senhas") ||
+      lowerCase.includes("sem senhas") ||
       lowerCase.includes("sem senhas") ||
       lowerCase.includes("sem senha") ||
       lowerCase.includes("chat") ||
@@ -123,10 +166,14 @@ class MessageParser {
       lowerCase.includes("voz do agente demora na hora de falar com o cliente") ||
       lowerCase.includes("sem internet") ||
       lowerCase.includes("sem acesso a internet") ||
-      lowerCase.includes("net esta muito ruim") ||
+      lowerCase.includes("internet esta muito ruim") ||
       lowerCase.includes("internet") ||
+      lowerCase.includes("sem conexao") ||
+      lowerCase.includes("pontomais nao funciona") ||
+      lowerCase.includes("ponto nao funciona") ||
+      lowerCase.includes("nao tem conexao") ||
       lowerCase.includes("sem acesso") ||
-      lowerCase.includes("teste") ||
+      lowerCase.includes("sem conexao com a internet") ||
       lowerCase.includes("nao carrega pagina")
      
      ) {

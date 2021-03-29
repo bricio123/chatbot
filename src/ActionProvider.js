@@ -7,7 +7,7 @@ class ActionProvider {
 
   //função que responde com uma imagem com o link do dialer
   handleMessageLinks = () => {
-    const messages = this.createChatBotMessage("Aqui esta os links importantes ", {
+    const messages = this.createChatBotMessage("Aqui estao os links importantes ", {
       widget: "Links",
       withAvatar: true,
     });
