@@ -21,11 +21,9 @@ class MessageParser {
       lowerCase.includes("Boa tarde")||
       lowerCase.includes("Boa noite")||
       lowerCase.includes("bom dia")||
-      lowerCase.includes("oiii")||
-      lowerCase.includes("oii")||
-      lowerCase.includes("ooi")||
       lowerCase.includes("oi")
     ) {
+
       return this.actionProvider.handleMessageParser();
     }
 
@@ -81,18 +79,8 @@ class MessageParser {
     }
 
 
-
-    
-
-
-
-
 //------------------------------------------------------------------------
 
-
-
-    
-   
 
 
      //relacionado ao raspberry
@@ -233,7 +221,7 @@ class MessageParser {
      ) {
       return this.actionProvider.handleMessageLatencia();
     }
-    //relacionado ao dialer
+    //relacionado llinks
     if (
       lowerCase.includes("dialer") ||
       lowerCase.includes("onde fica o dialer") ||
