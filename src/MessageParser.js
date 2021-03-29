@@ -110,6 +110,7 @@ class MessageParser {
       lowerCase.includes("senhas") ||
       lowerCase.includes("senha") ||
       lowerCase.includes("minhas senhas") ||
+      lowerCase.includes("minha senha") ||
       lowerCase.includes("sem acesso as senhas") ||
       lowerCase.includes("preciso da minha senha") ||
       lowerCase.includes("nao sei a senha do dialer") ||
@@ -124,10 +125,63 @@ class MessageParser {
       lowerCase.includes("sem senha do skype") ||
       lowerCase.includes("sem senha do basetech ") ||
       lowerCase.includes("sem senha do ") ||
+      lowerCase.includes("sem as minhass senhas") ||
+      lowerCase.includes("sem as senhas do agent") ||
       lowerCase.includes("sem senhas") ||
-      lowerCase.includes("sem senhas") ||
-      lowerCase.includes("sem senhas") ||
-      lowerCase.includes("sem senha") ||
+      lowerCase.includes("o basetech do agent está sem senha") ||
+      lowerCase.includes("o basetech do agent está sem as senhas") ||
+      lowerCase.includes("o agent está sem as senhas") ||
+      lowerCase.includes("o agent está sem as senhas dele") ||
+      lowerCase.includes("nao consigo entrar no KYC do agent") ||
+      lowerCase.includes("nao consigo entrar no GWU do agent") ||
+      lowerCase.includes("nao consigo entrar no Dialer do agent") ||
+      lowerCase.includes("nao consigo entrar no basetech do agent") ||
+      lowerCase.includes("nao consigo acessar o kyc do agent") ||
+      lowerCase.includes("nao consigo acessar o dialer agent") ||
+      lowerCase.includes("nao acessar o gwu do agent") ||
+      lowerCase.includes("nao consigo acessar o slack do agent") ||
+      lowerCase.includes("nao consigo acessa o skype do senior") ||
+      lowerCase.includes("nao consigo acessar as senhas do senior") ||
+      lowerCase.includes("nao consigo acessar a senha do senior") ||
+      lowerCase.includes("nao consigo acessar o slack") ||
+      lowerCase.includes("nao consigo acessar o gwu") ||
+      lowerCase.includes("nao consigo entrar em uma conta") ||
+      lowerCase.includes("nao consigo achar a senha") ||
+      lowerCase.includes("nao consigo encontrar as senhas dos usuarios") ||
+      lowerCase.includes("nao consigo encontrar a senha do agent") ||
+      lowerCase.includes("nao consigo encontrar as senhas de usuario") ||
+      lowerCase.includes("nao consigo encontrar as senhas") ||
+      lowerCase.includes("nao consigo fazer login no dialer") ||
+      lowerCase.includes("nao consigo fazer login no gwu") ||
+      lowerCase.includes("nao consigo fazer login no slack") ||
+      lowerCase.includes("nao consigo fazer login no basetech") ||
+      lowerCase.includes("nao consigo fazer login no skype") ||
+      lowerCase.includes("entrar no login dos usuarios") ||
+      lowerCase.includes("entrar no login dos agents") ||
+      lowerCase.includes("entrar no kcy do agent") ||
+      lowerCase.includes("entrar no dialer do agent") ||
+      lowerCase.includes("entrar no gwu do agent") ||
+      lowerCase.includes("entrar com usuario do agent") ||
+      lowerCase.includes("entrar com a senha do agent") ||
+      lowerCase.includes("onde estão as senhas dos agents") ||
+      lowerCase.includes("onde esta o gwu do agent") ||
+      lowerCase.includes("onde esta a senha do gwu do agent") ||
+      lowerCase.includes("onde esta a senha do dialer do agent") ||
+      lowerCase.includes("onde estao as senhas dos agents") ||
+      lowerCase.includes("onde esta a senha do kyc dos agents") ||
+      lowerCase.includes("onde esta a senha do kyc do agent") ||
+      lowerCase.includes("onde estao as senhas") ||
+      lowerCase.includes("onde estao as credenciais") ||
+      lowerCase.includes("credenciais dos agents") ||
+      lowerCase.includes("onde esta o arquivo de senhas") ||
+      lowerCase.includes("arquivo de senhas") ||
+      lowerCase.includes("senhas dos agents") ||
+      lowerCase.includes("preciso das senhas dos agents") ||
+      lowerCase.includes("preciso da senha do agent") ||
+      lowerCase.includes("preciso das senhas") ||
+      lowerCase.includes("credenciais") ||
+      lowerCase.includes("preciso das credenciais") ||
+      lowerCase.includes("lista de senhas dos agents") ||
       lowerCase.includes("chat") ||
       lowerCase.includes("onde estao as senhas")
     ) {
