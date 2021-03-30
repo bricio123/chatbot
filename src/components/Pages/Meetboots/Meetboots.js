@@ -1,7 +1,7 @@
 import React from "react";
 import "./Meetboots.css";
 import Meetbot from '../../../assets/meetbot.svg';
-
+import {FaSymbol} from '@fortawesome/fontawesome-svg-core';
 export default function Meetboots() {
   return (
     <div className="bots_container">
@@ -18,6 +18,15 @@ export default function Meetboots() {
             <img src={Meetbot}/>
           </div>
       </div>
+      <div className='list__options'>
+          <ul>
+            <li>ola</li>
+            <li>ola</li>
+            <li>ola</li>
+            <li>ola</li>
+          </ul>
+      </div>
+
     </div>
   );
 }
