@@ -9,25 +9,24 @@ class MessageParser {
 
   parse = (message) => {
     const lowerCase = message.toLowerCase();
-   
-//rlacionado a apresentação
+
+    //rlacionado a apresentação
     if (
-      lowerCase.includes("ola") || 
+      lowerCase.includes("ola") ||
       lowerCase.includes("tudo bem") ||
       lowerCase.includes("preciso de ajuda") ||
-      lowerCase.includes("nao sei com fazer")||
-      lowerCase.includes("estou com duvida")||
-      lowerCase.includes("como fazer")||
-      lowerCase.includes("Boa tarde")||
-      lowerCase.includes("Boa noite")||
-      lowerCase.includes("bom dia")||
+      lowerCase.includes("nao sei com fazer") ||
+      lowerCase.includes("estou com duvida") ||
+      lowerCase.includes("como fazer") ||
+      lowerCase.includes("Boa tarde") ||
+      lowerCase.includes("Boa noite") ||
+      lowerCase.includes("bom dia") ||
       lowerCase.includes("oi")
     ) {
-
       return this.actionProvider.handleMessageParser();
     }
 
-//relacionado ao dialer
+    //relacionado ao dialer
     if (
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
@@ -69,34 +68,31 @@ class MessageParser {
       lowerCase.includes("agent nao esta conseguindo ligar") ||
       lowerCase.includes("problema no callback") ||
       lowerCase.includes("dialer com problema de callback") ||
-      lowerCase.includes("caixa adicional do dialer nao aparece")||
-      lowerCase.includes("caixa adicional do dialer nao conecta")||     
-      lowerCase.includes("nao entra na chamada")||
-      lowerCase.includes("nao recebe chamadas")||
-      lowerCase.includes("dialer travou")||
-      lowerCase.includes("dialer nao conecta")||
-      lowerCase.includes("nao conecta corretamente")||
-      lowerCase.includes("nao conecta corretamente")||
-      lowerCase.includes("agent nao recebe chamadas")||
-      lowerCase.includes("agent nao consegue ouvir as ligações")||
-      lowerCase.includes("agent nao consgue ligar no dialer")||
-      lowerCase.includes("agent nao consegue ligar")||
-      lowerCase.includes("agent nao consegue completar chamada")||
-      lowerCase.includes("nao recebe ligações")||
-      lowerCase.includes("nao recebe chamadas")||
-      lowerCase.includes("dialer do agent esta fora")||
-      lowerCase.includes("dialer do agent nao funciona")||
+      lowerCase.includes("caixa adicional do dialer nao aparece") ||
+      lowerCase.includes("caixa adicional do dialer nao conecta") ||
+      lowerCase.includes("nao entra na chamada") ||
+      lowerCase.includes("nao recebe chamadas") ||
+      lowerCase.includes("dialer travou") ||
+      lowerCase.includes("dialer nao conecta") ||
+      lowerCase.includes("nao conecta corretamente") ||
+      lowerCase.includes("nao conecta corretamente") ||
+      lowerCase.includes("agent nao recebe chamadas") ||
+      lowerCase.includes("agent nao consegue ouvir as ligações") ||
+      lowerCase.includes("agent nao consgue ligar no dialer") ||
+      lowerCase.includes("agent nao consegue ligar") ||
+      lowerCase.includes("agent nao consegue completar chamada") ||
+      lowerCase.includes("nao recebe ligações") ||
+      lowerCase.includes("nao recebe chamadas") ||
+      lowerCase.includes("dialer do agent esta fora") ||
+      lowerCase.includes("dialer do agent nao funciona") ||
       lowerCase.includes("dialer nao chama")
     ) {
       return this.actionProvider.handleMessageDialerDontWork();
     }
 
+    //------------------------------------------------------------------------
 
-//------------------------------------------------------------------------
-
-
-
-     //relacionado ao raspberry
+    //relacionado ao raspberry
     if (
       lowerCase.includes("rasp") ||
       lowerCase.includes("raspberry com problema") ||
@@ -114,8 +110,8 @@ class MessageParser {
       lowerCase.includes("raspberry") ||
       lowerCase.includes("berry")
     ) {
-      return this.actionProvider.handleMessageRaspberry()
-    } 
+      return this.actionProvider.handleMessageRaspberry();
+    }
 
     //relacionado as senhas
     if (
@@ -197,91 +193,93 @@ class MessageParser {
       lowerCase.includes("chat") ||
       lowerCase.includes("onde estao as senhas")
     ) {
-      return this.actionProvider.handleMessagePassaword()
+      return this.actionProvider.handleMessagePassaword();
     }
-  
+
     //relacionado ao fone
     if (
       lowerCase.includes("fone") ||
       lowerCase.includes("sem som") ||
-      lowerCase.includes("headseat")||
-      lowerCase.includes("fone de ouvido")||
-      lowerCase.includes("ouvido")||
-      lowerCase.includes("fone nao ")||
-      lowerCase.includes("meu fone esta com mal contato")||
-      lowerCase.includes("nao escuto nada")||
-      lowerCase.includes("a chamada nao atende")||
-      lowerCase.includes("minha caixa adicional do nao fumciona")||
-      lowerCase.includes("nao consigo ligar")||
-      lowerCase.includes("nao ouço chamar")||
-      lowerCase.includes("nao consigo ouvir")||
-      lowerCase.includes("a pessoa nao me escuta")||
-      lowerCase.includes("eu nao consigo ligar")||
-      lowerCase.includes("o microfone parou de funcionar")||
-      lowerCase.includes("eu nao consigo completar chamada")||
-      lowerCase.includes("sem interface de fone")||
-      lowerCase.includes("sem som na chamada")||
-      lowerCase.includes("sem som na ligação")||
-      lowerCase.includes("sem som no microfone")||
-      lowerCase.includes("chamada sem som")||
-      lowerCase.includes("chamada com som ruim")||
-      lowerCase.includes("nao tem som na ligação")||
-      lowerCase.includes("nao tem som na chamada do dialer")||
-      lowerCase.includes("sem som no dialer")||
-      lowerCase.includes("chamada de som nao funciona")||
-      lowerCase.includes("chamada de som nao entra")||
-      lowerCase.includes("chamada do agent sem som")||
-      lowerCase.includes("chama e nao conecta")||
-      lowerCase.includes("dialer chama e nao conecta")||
-      lowerCase.includes("sem som no fone")||
-      lowerCase.includes("fone nao conecta")||
-      lowerCase.includes("ligação sem som")||
-      lowerCase.includes("ligação nao funciona")||
-      lowerCase.includes("agent sem som")||
-      lowerCase.includes("agent esta dizendo que a chamada nao conecta")||
-      lowerCase.includes("agent esta reclamando do fone")||
-      lowerCase.includes("sem fone")||
-      lowerCase.includes("ligação nao funciona")||
-      lowerCase.includes("ligação nao entra")||
-      lowerCase.includes("chamada nao conecta")||
-      lowerCase.includes("chamada do agent com problema")||
-      lowerCase.includes("dialer nao consegue completar a chamada")||
-      lowerCase.includes("dialer nao consegue conectar a chamada")||
-      lowerCase.includes("agent nao consegue completar a chamada")||
-      lowerCase.includes("chamada com som estranho")||
-      lowerCase.includes("chamada nao esta conectando")||
-      lowerCase.includes("chamada do agent nao conecta corretamente")||
-      lowerCase.includes("chamada")||
-      lowerCase.includes("chamada do agent")||
-      lowerCase.includes("ligação")||
-      lowerCase.includes("ligação do agent")||
-      lowerCase.includes("problema de ligação")||
-      lowerCase.includes("problema de som")||
-      lowerCase.includes("dialer com problema de ligação")||
-      lowerCase.includes("problema na chamada")||
-      lowerCase.includes("dialer com problema na chamada")||
-      lowerCase.includes("dialer nao conecta chamada")||
-      lowerCase.includes("agent nao consegue completar a ligação")||
-      lowerCase.includes("ligação no dialer")||
-      lowerCase.includes("delay na ligação do dialer")||
-      lowerCase.includes("ligação travou")||
-      lowerCase.includes("fone de ouvido nao esta conectando")||
-      lowerCase.includes("fone do agent nao conecta")||
-      lowerCase.includes("ligação do agent sem som")||
-      lowerCase.includes("a ligação do agent esta com problemas")||
-      lowerCase.includes("o agent esta com problemas na chamada")||
-      lowerCase.includes("ligação no dialer com problema")||
-      lowerCase.includes("fone do agent nao funciona como deveria")||
-      lowerCase.includes("ligação do agent nao funciona da maneira correta")||
-      lowerCase.includes("eu nao tenho adaptador de fone")||
+      lowerCase.includes("headseat") ||
+      lowerCase.includes("fone de ouvido") ||
+      lowerCase.includes("ouvido") ||
+      lowerCase.includes("fone nao ") ||
+      lowerCase.includes("meu fone esta com mal contato") ||
+      lowerCase.includes("nao escuto nada") ||
+      lowerCase.includes("a chamada nao atende") ||
+      lowerCase.includes("minha caixa adicional do nao fumciona") ||
+      lowerCase.includes("nao consigo ligar") ||
+      lowerCase.includes("nao ouço chamar") ||
+      lowerCase.includes("nao consigo ouvir") ||
+      lowerCase.includes("a pessoa nao me escuta") ||
+      lowerCase.includes("eu nao consigo ligar") ||
+      lowerCase.includes("o microfone parou de funcionar") ||
+      lowerCase.includes("eu nao consigo completar chamada") ||
+      lowerCase.includes("sem interface de fone") ||
+      lowerCase.includes("sem som na chamada") ||
+      lowerCase.includes("sem som na ligação") ||
+      lowerCase.includes("sem som no microfone") ||
+      lowerCase.includes("chamada sem som") ||
+      lowerCase.includes("chamada com som ruim") ||
+      lowerCase.includes("nao tem som na ligação") ||
+      lowerCase.includes("nao tem som na chamada do dialer") ||
+      lowerCase.includes("sem som no dialer") ||
+      lowerCase.includes("chamada de som nao funciona") ||
+      lowerCase.includes("chamada de som nao entra") ||
+      lowerCase.includes("chamada do agent sem som") ||
+      lowerCase.includes("chama e nao conecta") ||
+      lowerCase.includes("dialer chama e nao conecta") ||
+      lowerCase.includes("sem som no fone") ||
+      lowerCase.includes("fone nao conecta") ||
+      lowerCase.includes("ligação sem som") ||
+      lowerCase.includes("ligação nao funciona") ||
+      lowerCase.includes("agent sem som") ||
+      lowerCase.includes("agent esta dizendo que a chamada nao conecta") ||
+      lowerCase.includes("agent esta reclamando do fone") ||
+      lowerCase.includes("sem fone") ||
+      lowerCase.includes("ligação nao funciona") ||
+      lowerCase.includes("ligação nao entra") ||
+      lowerCase.includes("chamada nao conecta") ||
+      lowerCase.includes("chamada do agent com problema") ||
+      lowerCase.includes("dialer nao consegue completar a chamada") ||
+      lowerCase.includes("dialer nao consegue conectar a chamada") ||
+      lowerCase.includes("agent nao consegue completar a chamada") ||
+      lowerCase.includes("chamada com som estranho") ||
+      lowerCase.includes("chamada nao esta conectando") ||
+      lowerCase.includes("chamada do agent nao conecta corretamente") ||
+      lowerCase.includes("chamada") ||
+      lowerCase.includes("chamada do agent") ||
+      lowerCase.includes("ligação") ||
+      lowerCase.includes("ligação do agent") ||
+      lowerCase.includes("problema de ligação") ||
+      lowerCase.includes("problema de som") ||
+      lowerCase.includes("dialer com problema de ligação") ||
+      lowerCase.includes("problema na chamada") ||
+      lowerCase.includes("dialer com problema na chamada") ||
+      lowerCase.includes("dialer nao conecta chamada") ||
+      lowerCase.includes("agent nao consegue completar a ligação") ||
+      lowerCase.includes("ligação no dialer") ||
+      lowerCase.includes("delay na ligação do dialer") ||
+      lowerCase.includes("ligação travou") ||
+      lowerCase.includes("fone de ouvido nao esta conectando") ||
+      lowerCase.includes("fone do agent nao conecta") ||
+      lowerCase.includes("ligação do agent sem som") ||
+      lowerCase.includes("a ligação do agent esta com problemas") ||
+      lowerCase.includes("o agent esta com problemas na chamada") ||
+      lowerCase.includes("ligação no dialer com problema") ||
+      lowerCase.includes("fone do agent nao funciona como deveria") ||
+      lowerCase.includes("ligação do agent nao funciona da maneira correta") ||
+      lowerCase.includes("eu nao tenho adaptador de fone") ||
       lowerCase.includes("nao funciona o fone de oduvio")
-     ) {
+    ) {
       return this.actionProvider.handleMessageHeadseat();
     }
 
     //relacionado a latencia
     if (
-      lowerCase.includes("voz do agente demora na hora de falar com o cliente") ||
+      lowerCase.includes(
+        "voz do agente demora na hora de falar com o cliente"
+      ) ||
       lowerCase.includes("sem internet") ||
       lowerCase.includes("sem acesso a internet") ||
       lowerCase.includes("internet esta muito ruim") ||
@@ -293,8 +291,7 @@ class MessageParser {
       lowerCase.includes("sem acesso") ||
       lowerCase.includes("sem conexao com a internet") ||
       lowerCase.includes("nao carrega pagina")
-     
-     ) {
+    ) {
       return this.actionProvider.handleMessageLatencia();
     }
     //relacionado llinks
@@ -329,11 +326,7 @@ class MessageParser {
       return this.actionProvider.handleMessageLinks();
     }
     return this.actionProvider.handleDefault();
-  }
-
+  };
 }
 
-
-
 export default MessageParser;
-N

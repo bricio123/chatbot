@@ -9,7 +9,7 @@ export default function ContainerHeader() {
       <div className="text_container">
         <p>Nossos bots tiram suas dúvidas com perguntas rápidas e resumida </p>
         <sectio className="buttons-group">
-          <Link to="">
+          <Link to="/Meetbot">
 
           <button>conhecer</button>
           </Link>

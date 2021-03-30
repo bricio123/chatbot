@@ -4,6 +4,8 @@ import Dashboard from "./components/Pages/Dashboard/Dashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Patricia from "./components/BotOne/BotOne";
 import Purpose from './components/Pages/Purpose/Purpose';
+import Meetbot from './components/Pages/Meetboots/Meetboots';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,6 +24,7 @@ function App() {
       <Route path="/Dashboard"component={Dashboard} />
       <Route path="/Patricia" component={Patricia} />
       <Route path="/Purpose" component={Purpose} />
+      <Route path="/Meetbot" component={Meetbot} />
     </BrowserRouter>
   );
 }
