@@ -4,7 +4,7 @@ import "../ContainerHeader/ContainerHeader.css";
 import { Link} from 'react-router-dom';
 export default function ContainerHeader() {
   return (
-    <div className="Container-jumbotron">
+    <div className="Container-jumbotron red">
       <h1 className="classname">ChatBot</h1>
       <div className="text_container">
         <p>Nossos bots tiram suas dúvidas com perguntas rápidas e resumida </p>
