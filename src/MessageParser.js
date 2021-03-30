@@ -21,33 +21,66 @@ class MessageParser {
       lowerCase.includes("Boa tarde")||
       lowerCase.includes("Boa noite")||
       lowerCase.includes("bom dia")||
-      lowerCase.includes("oiii")||
-      lowerCase.includes("oii")||
-      lowerCase.includes("ooi")||
       lowerCase.includes("oi")
     ) {
+
       return this.actionProvider.handleMessageParser();
     }
+
 //relacionado ao dialer
     if (
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer não entra") ||
+      lowerCase.includes("problema no dialer") ||
+      lowerCase.includes("problema com o dialer") ||
+      lowerCase.includes("dialer não responde") ||
+      lowerCase.includes("dialer com problema") ||
+      lowerCase.includes("dialer nao responde") ||
+      lowerCase.includes("dialer nao deixa chamar") ||
+      lowerCase.includes("dialer nao esta funcionando corretamente") ||
+      lowerCase.includes("dialer nao esta respondendo como deveria") ||
+      lowerCase.includes("problema na hora de discar") ||
+      lowerCase.includes("problema para fazer ligação no dialer") ||
+      lowerCase.includes("problema para ligar") ||
+      lowerCase.includes("dialer nao esta conectando a chamada") ||
+      lowerCase.includes("dialer nao abre caixa adicional") ||
+      lowerCase.includes("dialer nao esta funcionando") ||
+      lowerCase.includes("dialer nao esta entrando") ||
+      lowerCase.includes("dialer nao conecta") ||
+      lowerCase.includes("dialer nao liga") ||
+      lowerCase.includes("dialer nao aceita chamadas") ||
+      lowerCase.includes("agent nao consegue utilizar o dialer") ||
+      lowerCase.includes("agent nao consegue ligar") ||
+      lowerCase.includes("agent com problema para usar o dialer") ||
+      lowerCase.includes("agent com leads ruins no dialer") ||
+      lowerCase.includes("agent nao consegue completar ligação") ||
+      lowerCase.includes("dialer do agent com problema") ||
+      lowerCase.includes("nao consegue dialer") ||
+      lowerCase.includes("dialer est fora") ||
+      lowerCase.includes("dialer nao entra") ||
+      lowerCase.includes("agent nao consegue usar o dialer") ||
+      lowerCase.includes("agent nao consegue retornar chamadas") ||
+      lowerCase.includes("dialer nao aceita retornar chamadas") ||
+      lowerCase.includes("nao estou conseguindo usar o dialer") ||
+      lowerCase.includes("problema nas chamadas") ||
+      lowerCase.includes("problema para abrir o dialer") ||
+      lowerCase.includes("dialer nao esta funcionando") ||
+      lowerCase.includes("agent nao esta conseguindo ligar") ||
+      lowerCase.includes("problema no callback") ||
+      lowerCase.includes("dialer com problema de callback") ||
       lowerCase.includes("caixa adicional do dialer nao aparece")||
       lowerCase.includes("caixa adicional do dialer nao conecta")||
       lowerCase.includes("nao entra na chamada")||
-      lowerCase.includes("nao receb78-000000e chamadas")||
+      lowerCase.includes("nao recebe chamadas")||
       lowerCase.includes("dialer nao chama")
     ) {
       return this.actionProvider.handleMessageDialerDontWork();
     }
-    if (
-      lowerCase.includes("registrar o ponto") ||
-      lowerCase.includes("pontomais") ||
-      lowerCase.includes("ponto")
-    ) {
-      return this.actionProvider.handleMessagePontomais()
-    }
+
+
+//------------------------------------------------------------------------
+
 
 
      //relacionado ao raspberry
@@ -57,7 +90,7 @@ class MessageParser {
       lowerCase.includes("berry")
     ) {
       return this.actionProvider.handleMessageRaspberry()
-    }
+    } 
 
     //relacionado as senhas
     if (
@@ -65,6 +98,7 @@ class MessageParser {
       lowerCase.includes("senhas") ||
       lowerCase.includes("senha") ||
       lowerCase.includes("minhas senhas") ||
+      lowerCase.includes("minha senha") ||
       lowerCase.includes("sem acesso as senhas") ||
       lowerCase.includes("preciso da minha senha") ||
       lowerCase.includes("nao sei a senha do dialer") ||
@@ -74,8 +108,68 @@ class MessageParser {
       lowerCase.includes("chat de conversa da empresa") ||
       lowerCase.includes("preciso do basetech") ||
       lowerCase.includes("senhas") ||
+      lowerCase.includes("sem senha do dialer") ||
+      lowerCase.includes("sem senha do gwu") ||
+      lowerCase.includes("sem senha do skype") ||
+      lowerCase.includes("sem senha do basetech ") ||
+      lowerCase.includes("sem senha do ") ||
+      lowerCase.includes("sem as minhass senhas") ||
+      lowerCase.includes("sem as senhas do agent") ||
       lowerCase.includes("sem senhas") ||
-      lowerCase.includes("sem senha") ||
+      lowerCase.includes("o basetech do agent está sem senha") ||
+      lowerCase.includes("o basetech do agent está sem as senhas") ||
+      lowerCase.includes("o agent está sem as senhas") ||
+      lowerCase.includes("o agent está sem as senhas dele") ||
+      lowerCase.includes("nao consigo entrar no KYC do agent") ||
+      lowerCase.includes("nao consigo entrar no GWU do agent") ||
+      lowerCase.includes("nao consigo entrar no Dialer do agent") ||
+      lowerCase.includes("nao consigo entrar no basetech do agent") ||
+      lowerCase.includes("nao consigo acessar o kyc do agent") ||
+      lowerCase.includes("nao consigo acessar o dialer agent") ||
+      lowerCase.includes("nao acessar o gwu do agent") ||
+      lowerCase.includes("nao consigo acessar o slack do agent") ||
+      lowerCase.includes("nao consigo acessa o skype do senior") ||
+      lowerCase.includes("nao consigo acessar as senhas do senior") ||
+      lowerCase.includes("nao consigo acessar a senha do senior") ||
+      lowerCase.includes("nao consigo acessar o slack") ||
+      lowerCase.includes("nao consigo acessar o gwu") ||
+      lowerCase.includes("nao consigo entrar em uma conta") ||
+      lowerCase.includes("nao consigo achar a senha") ||
+      lowerCase.includes("nao consigo encontrar as senhas dos usuarios") ||
+      lowerCase.includes("nao consigo encontrar a senha do agent") ||
+      lowerCase.includes("nao consigo encontrar as senhas de usuario") ||
+      lowerCase.includes("nao consigo encontrar as senhas") ||
+      lowerCase.includes("nao consigo fazer login no dialer") ||
+      lowerCase.includes("nao consigo fazer login no gwu") ||
+      lowerCase.includes("nao consigo fazer login no slack") ||
+      lowerCase.includes("nao consigo fazer login no basetech") ||
+      lowerCase.includes("nao consigo fazer login no skype") ||
+      lowerCase.includes("entrar no login dos usuarios") ||
+      lowerCase.includes("entrar no login dos agents") ||
+      lowerCase.includes("entrar no kcy do agent") ||
+      lowerCase.includes("entrar no dialer do agent") ||
+      lowerCase.includes("entrar no gwu do agent") ||
+      lowerCase.includes("entrar com usuario do agent") ||
+      lowerCase.includes("entrar com a senha do agent") ||
+      lowerCase.includes("onde estão as senhas dos agents") ||
+      lowerCase.includes("onde esta o gwu do agent") ||
+      lowerCase.includes("onde esta a senha do gwu do agent") ||
+      lowerCase.includes("onde esta a senha do dialer do agent") ||
+      lowerCase.includes("onde estao as senhas dos agents") ||
+      lowerCase.includes("onde esta a senha do kyc dos agents") ||
+      lowerCase.includes("onde esta a senha do kyc do agent") ||
+      lowerCase.includes("onde estao as senhas") ||
+      lowerCase.includes("onde estao as credenciais") ||
+      lowerCase.includes("credenciais dos agents") ||
+      lowerCase.includes("onde esta o arquivo de senhas") ||
+      lowerCase.includes("arquivo de senhas") ||
+      lowerCase.includes("senhas dos agents") ||
+      lowerCase.includes("preciso das senhas dos agents") ||
+      lowerCase.includes("preciso da senha do agent") ||
+      lowerCase.includes("preciso das senhas") ||
+      lowerCase.includes("credenciais") ||
+      lowerCase.includes("preciso das credenciais") ||
+      lowerCase.includes("lista de senhas dos agents") ||
       lowerCase.includes("chat") ||
       lowerCase.includes("onde estao as senhas")
     ) {
@@ -114,21 +208,47 @@ class MessageParser {
       lowerCase.includes("voz do agente demora na hora de falar com o cliente") ||
       lowerCase.includes("sem internet") ||
       lowerCase.includes("sem acesso a internet") ||
-      lowerCase.includes("net esta muito ruim") ||
+      lowerCase.includes("internet esta muito ruim") ||
       lowerCase.includes("internet") ||
-      lowerCase.includes("sem net") ||
+      lowerCase.includes("sem conexao") ||
+      lowerCase.includes("pontomais nao funciona") ||
+      lowerCase.includes("ponto nao funciona") ||
+      lowerCase.includes("nao tem conexao") ||
       lowerCase.includes("sem acesso") ||
-      lowerCase.includes("teste") ||
-      lowerCase.includes("cliente nao consegue ouvir")
+      lowerCase.includes("sem conexao com a internet") ||
+      lowerCase.includes("nao carrega pagina")
      
      ) {
       return this.actionProvider.handleMessageLatencia();
     }
-    //relacionado ao dialer
+    //relacionado llinks
     if (
       lowerCase.includes("dialer") ||
       lowerCase.includes("onde fica o dialer") ||
-      lowerCase.includes("como acessar o dialer")
+      lowerCase.includes("links importantes") ||
+      lowerCase.includes("links da ti") ||
+      lowerCase.includes("preciso dos links") ||
+      lowerCase.includes("preciso do basetech") ||
+      lowerCase.includes("preciso do ponto") ||
+      lowerCase.includes("preciso do dialer") ||
+      lowerCase.includes("preciso dos links internos") ||
+      lowerCase.includes("basetech") ||
+      lowerCase.includes("preciso entrar no dialer") ||
+      lowerCase.includes("preciso registrar o ponto") ||
+      lowerCase.includes("preciso das senhas") ||
+      lowerCase.includes("preciso do chat") ||
+      lowerCase.includes("senhas") ||
+      lowerCase.includes("senha") ||
+      lowerCase.includes("abrir o dialer") ||
+      lowerCase.includes("abrir basetech") ||
+      lowerCase.includes("link do basetech") ||
+      lowerCase.includes("link do dialer") ||
+      lowerCase.includes("pontomais") ||
+      lowerCase.includes("commpeak dialer") ||
+      lowerCase.includes("commpeak") ||
+      lowerCase.includes("links") ||
+      lowerCase.includes("ponto") ||
+      lowerCase.includes("link do ponto")
     ) {
       return this.actionProvider.handleMessageLinks();
     }
