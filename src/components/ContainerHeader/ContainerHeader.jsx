@@ -11,10 +11,10 @@ export default function ContainerHeader() {
         <sectio className="buttons-group">
           <Link to="/Meetbot">
 
-          <button>conhecer</button>
+          <button className="font">CONHECER</button>
           </Link>
           <Link to="/Dashboard">
-            <button>começar conversar</button>
+            <button className="font2">CONVERSAR</button>
           </Link>
         </sectio>
       </div>
