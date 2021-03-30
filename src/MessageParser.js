@@ -204,6 +204,7 @@ class MessageParser {
     if (
       lowerCase.includes("fone") ||
       lowerCase.includes("sem som") ||
+      lowerCase.includes("som") ||
       lowerCase.includes("headseat")||
       lowerCase.includes("fone de ouvido")||
       lowerCase.includes("ouvido")||

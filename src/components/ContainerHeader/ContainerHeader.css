@@ -7,16 +7,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: cornflowerblue;
  
 }
 .Container-jumbotron h1 {
   font-size: 5rem;
   text-transform: uppercase;
+ 
 }
 
 .text_container p {
   text-align: center;
   width: 100%;
+
+
 }
 .buttons-group button {
   padding: 10px;
@@ -32,4 +36,7 @@
   background:#000 ;
   color: #fff;
   
+}
+.classname{
+  font-family: 'Franklin Medium';
 }

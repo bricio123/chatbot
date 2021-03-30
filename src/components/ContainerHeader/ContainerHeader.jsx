@@ -5,7 +5,7 @@ import { Link} from 'react-router-dom';
 export default function ContainerHeader() {
   return (
     <div className="Container-jumbotron">
-      <h1>ChatBot</h1>
+      <h1 className="classname">ChatBot</h1>
       <div className="text_container">
         <p>Nossos bots tiram suas dúvidas com perguntas rápidas e resumida </p>
         <sectio className="buttons-group">
