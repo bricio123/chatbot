@@ -42,5 +42,6 @@
 }
 
 .red{
- background-color: red;
+  background: var(--link);
+
 }
