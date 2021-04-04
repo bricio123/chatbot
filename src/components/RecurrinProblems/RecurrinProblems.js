@@ -7,29 +7,70 @@ import chatbotImg from "../../assets/chatbot.svg";
 import raspbarry from "../../assets/raspberry.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCogs,
-  faHammer,
-  faBug,
-  faEyeDropper,
-  faSignature,
   faHeadset,
   faPhone,
   faNetworkWired,
   faUser,
-  faGoogle,
 } from "@fortawesome/free-solid-svg-icons";
-import { Accordion, Card, DropdownButton } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 
-//respostas da caixa
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
+function App() {
+  const [modalShow, setModalShow] = React.useState(false);
+
+  return (
+    <>
+      <div className="bots__list__err">
+        <ul className="list__err">
+          <li>
+            <p>Headseat</p>
+            <FontAwesomeIcon icon={faHeadset} />
+          </li>
+        </ul>
+      </div>
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </>
+  );
+}
+
 const RecurrinProblems = () => (
   <>
+    <App />
+
     <div className="bots__list__err">
       <p>Problemas recorrentes</p>
       <ul className="list__err">
-        <li>
-          <p>Headseat</p>
-          <FontAwesomeIcon icon={faHeadset} />
-        </li>
         <li>
           <p>Raspberry</p>
           <svg
