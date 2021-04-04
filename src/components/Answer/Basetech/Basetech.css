@@ -1,0 +1,15 @@
+.basetech_container{
+    width: 100%;
+}
+
+.basetech_container a img{
+    display: flex;
+
+
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+     width: 10rem;
+     border-radius: 20%;
+
+}

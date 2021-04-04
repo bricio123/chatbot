@@ -7,7 +7,7 @@ class ActionProvider {
 
   //função que responde com uma imagem com o link do dialer
   handleMessageLinks = () => {
-    const messages = this.createChatBotMessage("Aqui esta o link do dialer", {
+    const messages = this.createChatBotMessage("Aqui estao os links importantes ", {
       widget: "Links",
       withAvatar: true,
     });
@@ -51,7 +51,7 @@ class ActionProvider {
 
   handleMessageLatencia = () => {
     const messages = this.createChatBotMessage(
-      "Dialer nao não entra pode ser ocasionado quando a latência da internet está muito alta ou quando o navegador está desatualizado (atualize com o Menu.sh) que esta no arquivos.",
+      "Caso a conexão com algum site não esteja boa, você pode checar o link da latência!",
       {
         widget: "latencia",
         withAvatar: true,
@@ -94,6 +94,37 @@ class ActionProvider {
       }));
     }
   };
+
+    
+  handleMessagePassaword = () => {
+    const messages = this.createChatBotMessage(
+      "todas as senhas estao devidamente cadastradas no basetech, caso nao esteja, verifique no arquivo br2",
+      {
+        widget: "basetech",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
+    
+  handleMessageRaspberry = () => {
+    const messages = this.createChatBotMessage(
+      "aqui terá todas as informações sobre o raspberry",
+      {
+        widget: "raspberry",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
+    
+
+
+
+
+
 }
 
 export default ActionProvider;

@@ -6,6 +6,7 @@ import imgCode from '../../assets/img-code.jpeg';
 import imgPlanilha from '../../assets/img-planilha.jpg';
 import imgIp from '../../assets/img-ip.jpeg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import favorits from "../../assets/favoritos.jpg";
 import {
   faBoxOpen,
   faFileWord,
@@ -35,7 +36,10 @@ function MyVerticallyCenteredModal(props) {
                 <Card.Text>
                   Fazemos um mapeamento de ips em todas as raspberry para que nao tenha conflito de ips.
                 </Card.Text>
+                <a href={imgCode} download={imgCode}>
+
                 <Button variant="primary">Baixar</Button>
+                </a>
               </Card.Body>
             </Card>
           </div>
@@ -65,14 +69,14 @@ function MyVerticallyCenteredModal(props) {
           </div>
           <div>
             <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src={favorits} />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title>Favoritos</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Aqui você pode importar os favoritos para da área de trabalho para o seu navegador. 
+                
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary">Baixar</Button>
               </Card.Body>
             </Card>
           </div>
