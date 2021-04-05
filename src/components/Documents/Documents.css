@@ -38,23 +38,34 @@
   background: var(--senary);
 }
 /*modal*/
-.modal-content{
+.modal-content {
+  height: 90vh;
   color: var(--white);
-  background-color:var( --mention-message)  !important;
+  background-color: var(--mention-message) !important;
 }
-.files__grid{
+.files__grid {
   display: grid;
   align-items: center;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.files__grid div{
+.files__grid div {
   display: flex;
   color: var(--gray);
   flex-direction: column;
   align-items: center;
 }
-.card{
+.card {
+  width: 90% !important;
   background: var(--senary) !important;
   box-shadow: 1px 1px 20px 0px #000;
+  margin: 10px;
+}
+
+.card > img {
+  width: 100%;
+  height: 50% !important;
+}
+.card .card-text{
+  height: 100%;
+  font-size: 12px;
 }

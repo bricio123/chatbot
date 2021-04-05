@@ -6,8 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
- 
+  justify-content: center; 
+  
 }
 .Container-jumbotron h1 {
   font-size: 5rem;

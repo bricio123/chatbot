@@ -36,6 +36,19 @@ class ActionProvider {
     this.addMessageToBotState(messages);
   };
 
+  //mantando os processos
+  handleMessageKillProcess = () => {
+    const messages = this.createChatBotMessage(
+      "Quando temos esses problemas, nos encerramos o processo do site ou aplicativo em questão",
+      {
+        widget: "killProcess",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
+
   handleMessageLatencia = () => {
     const messages = this.createChatBotMessage(
       "Caso a conexão com algum site não esteja boa, você pode checar o link da latência!",
@@ -47,7 +60,6 @@ class ActionProvider {
 
     this.addMessageToBotState(messages);
   };
-
 
   handleMessageHeadseat = () => {
     const messages = this.createChatBotMessage(

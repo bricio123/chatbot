@@ -1,14 +1,15 @@
 import React from "react";
 import "./Meetboots.css";
 import Meetbot from '../../../assets/meetbot.svg';
-import {FaSymbol} from '@fortawesome/fontawesome-svg-core';
+import {faTachometerAlt, faHourglass, faHandPeace, faRobot} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 export default function Meetboots() {
   return (
     <div className="bots_container">
       <div className='hero__container'>
           <div className='hero__copy'>
             <h1>
-              Conheça cada um dos nosso bots!
+              Conheça cada um dos nossos bots!
             </h1>
             <p>
               Bom sabemos que nosso tempo e corrido então nós da Basetech criamos bots para solucionar perca de tempo e de informação criando bots inteligentes, que vai te auxiliar nas dúvidas recorrentes de problemas.
@@ -19,13 +20,17 @@ export default function Meetboots() {
           </div>
       </div>
       <div className='list__options'>
-          <ul>
-            <li>ola</li>
-            <li>ola</li>
-            <li>ola</li>
-            <li>ola</li>
+          <ul className='options__icons'>
+            <li><FontAwesomeIcon icon={faTachometerAlt}/></li>
+            <li><FontAwesomeIcon icon={faHourglass}/></li>
+            <li><FontAwesomeIcon icon={faHandPeace}/></li>
+            <li><FontAwesomeIcon icon={faRobot}/></li>
           </ul>
       </div>
+      <div className='paralax'>
+        
+      </div>
+
 
     </div>
   );

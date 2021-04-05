@@ -12,6 +12,22 @@ class MessageParser {
 
     //rlacionado a apresentação
     if (
+      lowerCase.includes("skype parou") ||
+      lowerCase.includes("google parou") ||
+      lowerCase.includes("aplicativo parou") ||
+      lowerCase.includes("aplicativo esta carregando e nao entra") ||
+      lowerCase.includes("any desk parou") ||
+      lowerCase.includes("travou") ||
+      lowerCase.includes("skype") ||
+      lowerCase.includes("google") ||
+      lowerCase.includes("chromium") ||
+      lowerCase.includes("skype travou") ||
+      lowerCase.includes("google travou") ||
+      lowerCase.includes("chromium travou")
+    ) {
+      return this.actionProvider.handleMessageKillProcess();
+    }
+    if (
       lowerCase.includes("ola") ||
       lowerCase.includes("tudo bem") ||
       lowerCase.includes("preciso de ajuda") ||
@@ -31,6 +47,7 @@ class MessageParser {
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer não entra") ||
+      
       lowerCase.includes("problema no dialer") ||
       lowerCase.includes("problema com o dialer") ||
       lowerCase.includes("dialer não responde") ||
@@ -72,6 +89,14 @@ class MessageParser {
       lowerCase.includes("caixa adicional do dialer nao conecta") ||
       lowerCase.includes("nao entra na chamada") ||
       lowerCase.includes("nao recebe chamadas") ||
+      lowerCase.includes("dialer nao chama") ||
+      lowerCase.includes("dialer esta fora do ar") ||
+      lowerCase.includes("eu nao acesso nada")
+    ) {
+      return this.actionProvider.handleMessageDialerDontWork();
+    }
+    if (
+      lowerCase.includes("fone") ||
       lowerCase.includes("dialer travou") ||
       lowerCase.includes("dialer nao conecta") ||
       lowerCase.includes("nao conecta corretamente") ||
@@ -204,6 +229,9 @@ class MessageParser {
       lowerCase.includes("fone de ouvido") ||
       lowerCase.includes("ouvido") ||
       lowerCase.includes("fone nao ") ||
+      lowerCase.includes("como configurar o fone no raspberry") ||
+      lowerCase.includes("como configurar o fone no ntc") ||
+      lowerCase.includes("nao funciona o fone de ouvido") ||
       lowerCase.includes("meu fone esta com mal contato") ||
       lowerCase.includes("nao escuto nada") ||
       lowerCase.includes("a chamada nao atende") ||
@@ -280,6 +308,12 @@ class MessageParser {
       lowerCase.includes(
         "voz do agente demora na hora de falar com o cliente"
       ) ||
+      lowerCase.includes("voz demora") ||
+      lowerCase.includes("voz") ||
+      lowerCase.includes("dialer demora") ||
+      lowerCase.includes("dialer com lentidao") ||
+      lowerCase.includes("clientes nao escuta agente") ||
+      lowerCase.includes("cliente nao consegue ouvir") ||
       lowerCase.includes("sem internet") ||
       lowerCase.includes("sem acesso a internet") ||
       lowerCase.includes("internet esta muito ruim") ||
