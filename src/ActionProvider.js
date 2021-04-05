@@ -7,7 +7,7 @@ class ActionProvider {
 
   //função que responde com uma imagem com o link do dialer
   handleMessageLinks = () => {
-    const messages = this.createChatBotMessage("Aqui estao os links importantes ", {
+    const messages = this.createChatBotMessage("Aqui estão os links importantes ", {
       widget: "Links",
       withAvatar: true,
     });
@@ -98,7 +98,7 @@ class ActionProvider {
     
   handleMessagePassaword = () => {
     const messages = this.createChatBotMessage(
-      "todas as senhas estao devidamente cadastradas no basetech, caso nao esteja, verifique no arquivo br2",
+      "Todas as senhas estão devidamente cadastradas no basetech, caso não esteja, verifique no arquivo br2 que está dentro dos documentos.",
       {
         widget: "basetech",
         withAvatar: true,
@@ -110,7 +110,7 @@ class ActionProvider {
     
   handleMessageRaspberry = () => {
     const messages = this.createChatBotMessage(
-      "aqui terá todas as informações sobre o raspberry",
+      "Todas as informações sobre o raspberry estarão disponíveis aqui:",
       {
         widget: "raspberry",
         withAvatar: true,
