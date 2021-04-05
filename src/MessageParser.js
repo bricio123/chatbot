@@ -47,6 +47,7 @@ class MessageParser {
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer não entra") ||
+      
       lowerCase.includes("problema no dialer") ||
       lowerCase.includes("problema com o dialer") ||
       lowerCase.includes("dialer não responde") ||

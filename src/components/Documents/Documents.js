@@ -29,7 +29,7 @@ function MyVerticallyCenteredModal(props) {
         <p>Aqui estão alguns arquivos que usamos</p>
         <div className="files__grid">
           <div>
-            <Card style={{ width: "18rem" }}>
+            <Card >
               <Card.Img variant="top" src={imgIp} />
               <Card.Body>
                 <Card.Title>Mapeamento de Ip`s</Card.Title>
@@ -44,7 +44,7 @@ function MyVerticallyCenteredModal(props) {
             </Card>
           </div>
           <div>
-            <Card style={{ width: "18rem" }}>
+            <Card >
               <Card.Img variant="top" src={imgPlanilha  }/>
               <Card.Body>
                 <Card.Title>Login dos agentes</Card.Title>
@@ -56,7 +56,7 @@ function MyVerticallyCenteredModal(props) {
             </Card>
           </div>
           <div>
-            <Card style={{ width: "18rem" }}>
+            <Card >
               <Card.Img variant="top" src={imgCode} />
               <Card.Body>
                 <Card.Title>Script</Card.Title>

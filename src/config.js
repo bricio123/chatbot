@@ -7,7 +7,6 @@ import ActionProvider from "./ActionProvider";
 import ClickClean from "./components/Answer/ClickClean/ClickClean";
 import LoginList from "./components/Answer/LoginList/LoginList";
 import Links from "./components/Answer/Action/Action";
-
 import KillProcess from "./components/Answer/KillProcess/KillProcess";
 
 import Basetech from "./components/Answer/Basetech/Basetech";

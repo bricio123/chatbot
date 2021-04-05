@@ -12,9 +12,6 @@ export default function ContainerHeader() {
         <p>Nossos bots tiram suas dúvidas com perguntas rápidas e resumida </p>
         <section className="buttons-group">
 
-          <Link to="">
-            <button>conhecer</button>
-          </Link>
           <Link to="/Meetbot">
 
           <button>conhecer</button>

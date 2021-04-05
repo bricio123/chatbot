@@ -1,72 +1,27 @@
 import React from "react";
 import "../RecurrinProblems/RecurrinProblems.css";
-
 import { Link } from "react-router-dom";
 import BotPatricia from "../BotPatricia/BotPatricia";
 import chatbotImg from "../../assets/chatbot.svg";
 import raspbarry from "../../assets/raspberry.svg";
+
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeadset,
   faPhone,
   faNetworkWired,
   faUser,
+  faHeadphonesAlt 
 } from "@fortawesome/free-solid-svg-icons";
 import { Modal, Button } from "react-bootstrap";
 
-function MyVerticallyCenteredModal(props) {
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
 
-function App() {
-  const [modalShow, setModalShow] = React.useState(false);
-
-  return (
-    <>
-      <div className="bots__list__err">
-        <ul className="list__err">
-          <li>
-            <p>Headseat</p>
-            <FontAwesomeIcon icon={faHeadset} />
-          </li>
-        </ul>
-      </div>
-
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </>
-  );
-}
 
 const RecurrinProblems = () => (
   <>
-    <App />
+
 
     <div className="bots__list__err">
       <p>Problemas recorrentes</p>
@@ -118,6 +73,10 @@ const RecurrinProblems = () => (
               d="M131.5 217.5L55.1 100.1c47.6-59.2 119-91.8 192-92.1 42.3-.3 85.5 10.5 124.8 33.2 43.4 25.2 76.4 61.4 97.4 103L264 133.4c-58.1-3.4-113.4 29.3-132.5 84.1zm32.9 38.5c0 46.2 37.4 83.6 83.6 83.6s83.6-37.4 83.6-83.6-37.4-83.6-83.6-83.6-83.6 37.3-83.6 83.6zm314.9-89.2L339.6 174c37.9 44.3 38.5 108.2 6.6 157.2L234.1 503.6c46.5 2.5 94.4-7.7 137.8-32.9 107.4-62 150.9-192 107.4-303.9zM133.7 303.6L40.4 120.1C14.9 159.1 0 205.9 0 256c0 124 90.8 226.7 209.5 244.9l63.7-124.8c-57.6 10.8-113.2-20.8-139.5-72.5z"
             ></path>
           </svg>
+        </li>
+        <li>
+          <p>Headseat</p>
+          <FontAwesomeIcon icon={faHeadphonesAlt} />
         </li>
       </ul>
     </div>
