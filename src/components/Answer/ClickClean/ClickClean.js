@@ -3,6 +3,7 @@ import "./ClickClean.css";
 import FirstImg from "../../../assets/cleaner-open.png";
 import SecondImg from "../../../assets/cleaner-menu.png";
 import { Accordion, Card } from "react-bootstrap";
+import thirdimagem from "../../../assets/Sclick.png";
 
 const Headseat = () => {
   return (
@@ -55,6 +56,26 @@ const Headseat = () => {
 
       
       </div></Card.Body>
+    </Accordion.Collapse>
+  </Card>
+
+  <Card>
+    <Accordion.Toggle as={Card.Header} eventKey="2">
+     Terceira etapa
+    </Accordion.Toggle>
+    <Accordion.Collapse eventKey="2">
+      <Card.Body>
+      <div className='desc__tre'>
+        <img src={thirdimagem} />
+        <h1>Habilitar todas as opções</h1>
+        <p>
+          Depois de ajustar as configurações, você pode habilitar todas as opções para iniciar o processo de
+          limpeza clicando no botão "Executar Limpeza".  Dessa forma as senhas serão apagadas assim como todas
+          informções dos usuários! 
+          Essa configuração apagará todos os dados de navegação de acordo com as configurações que
+          você especificou.
+        </p>
+     </div></Card.Body>
     </Accordion.Collapse>
   </Card>
 </Accordion>
