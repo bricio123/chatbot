@@ -99,6 +99,11 @@ const config = {
       widgetFunc: (props) => <Headseat {...props} />,
       mapStateToProps: ["gist"],
     },
+    {
+      widgetName: "basetech",
+      widgetFunc: (props) => <Basetech {...props} />,
+      mapStateToProps: ["gist"],
+    },
   ],
 };
 

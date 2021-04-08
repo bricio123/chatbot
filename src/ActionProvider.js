@@ -120,6 +120,17 @@ class ActionProvider {
     this.addMessageToBotState(messages);
   };
     
+  handleMessageBasetech = () => {
+    const messages = this.createChatBotMessage(
+      "Todas as informações sobre o Basetech",
+      {
+        widget: "basetech",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
 
 
 

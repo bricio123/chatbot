@@ -2,7 +2,6 @@ import React from "react";
 import "../Action/Action.css";
 import { Link } from "react-bootstrap";
 import dialer from "../../../assets/logodialer.webp";
-import Basetech from "../../../assets/basetech/logobs.png";
 import Pontomais from "../../../assets/pontomais/pontomais.png";
 
 const Links = () => {
@@ -15,13 +14,7 @@ const Links = () => {
           </a>
 
         </li>
-        <li>
-
-          <a href="https://192.168.240.250" target="blank">
-
-            <img src={Basetech} className="basetech" />
-          </a>
-        </li>
+        
 
           
 

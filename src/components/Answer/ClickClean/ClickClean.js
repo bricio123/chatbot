@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useRef, useState } from "react";
 import "./ClickClean.css";
 import FirstImg from "../../../assets/cleaner-open.png";

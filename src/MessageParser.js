@@ -335,11 +335,11 @@ class MessageParser {
       lowerCase.includes("links importantes") ||
       lowerCase.includes("links da ti") ||
       lowerCase.includes("preciso dos links") ||
-      lowerCase.includes("preciso do basetech") ||
+      
       lowerCase.includes("preciso do ponto") ||
       lowerCase.includes("preciso do dialer") ||
       lowerCase.includes("preciso dos links internos") ||
-      lowerCase.includes("basetech") ||
+     
       lowerCase.includes("preciso entrar no dialer") ||
       lowerCase.includes("preciso registrar o ponto") ||
       lowerCase.includes("preciso das senhas") ||
@@ -347,8 +347,8 @@ class MessageParser {
       lowerCase.includes("senhas") ||
       lowerCase.includes("senha") ||
       lowerCase.includes("abrir o dialer") ||
-      lowerCase.includes("abrir basetech") ||
-      lowerCase.includes("link do basetech") ||
+      
+     
       lowerCase.includes("link do dialer") ||
       lowerCase.includes("pontomais") ||
       lowerCase.includes("commpeak dialer") ||
@@ -358,6 +358,16 @@ class MessageParser {
       lowerCase.includes("link do ponto")
     ) {
       return this.actionProvider.handleMessageLinks();
+    }
+
+
+     // basetech
+     if (
+     
+      lowerCase.includes("basetech") ||
+      lowerCase.includes("Preciso do basetech")
+    ) {
+      return this.actionProvider.handleMessageBasetech();
     }
     return this.actionProvider.handleDefault();
   };
