@@ -7,7 +7,7 @@ class ActionProvider {
 
   //função que responde com uma imagem com o link do dialer
   handleMessageLinkDialer = () => {
-    const messages = this.createChatBotMessage("Aqui está o link do Dialer", {
+    const messages = this.createChatBotMessage("Aqui está o link do Dialer.", {
       widget: "LinkDialer",
       withAvatar: true,
     });
@@ -63,7 +63,7 @@ class ActionProvider {
 
   handleMessageHeadseat = () => {
     const messages = this.createChatBotMessage(
-      "Se o audio e o microfone não estiverem funcionando, veja as configuraçãos a seguir",
+      "Se o audio e o microfone não estiverem funcionando, veja as configuraçãos a seguir:",
       {
         widget: "headseat",
         withAvatar: true,
@@ -98,7 +98,7 @@ class ActionProvider {
     
   handleMessagePassaword = () => {
     const messages = this.createChatBotMessage(
-      "Todas as senhas estão devidamente cadastradas no basetech, caso não esteja, verifique no arquivo br2 que está dentro dos documentos.",
+      "Todas as senhas estão devidamente cadastradas no basetech, caso não esteja, verifique no documento br2 que está dentro dos arquivos.",
       {
         widget: "basetech",
         withAvatar: true,
@@ -108,7 +108,10 @@ class ActionProvider {
     this.addMessageToBotState(messages);
   };
     
-  handleMessageRaspberry = () => {
+//------------------------------------------------------------------------------------------------------------------
+  //Comentei o raspbery pois essa parte vai ficar pronta apenas para a próxima versão!
+
+  /*handleMessageRaspberry = () => {
     const messages = this.createChatBotMessage(
       "Todas as informações sobre o raspberry estarão disponíveis aqui:",
       {
@@ -118,8 +121,8 @@ class ActionProvider {
     );
 
     this.addMessageToBotState(messages);
-  };
-    
+  };*/
+ //-------------------------------------------------------------------------------------------------------------------   
   handleMessageLinkPontomais = () => {
     const messages = this.createChatBotMessage(
       "Aqui está o link do Pontomais.",

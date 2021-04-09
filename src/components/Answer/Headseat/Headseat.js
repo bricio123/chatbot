@@ -33,12 +33,12 @@ function Example() {
         keyboard={false}
       >
         <Modal.Header  closeButton>
-          <Modal.Title >Configuração do fone</Modal.Title>
+          <Modal.Title >Configuração do fone:</Modal.Title>
         </Modal.Header >
         <Modal.Body className="config__ntc">
           <p>
             Vá nas configurações de sons, e na saída coloque na configuração do
-            fone de ouvido, mesmo procedimento para a entrada!
+            fone de ouvido, mesmo procedimento para a entrada.
           </p>
           <img src={img_ntc} />
         </Modal.Body>
@@ -51,12 +51,12 @@ function Example() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Configuração do fone</Modal.Title>
+          <Modal.Title>Configuração do fone:</Modal.Title>
         </Modal.Header>
         <Modal.Body className="config__rasp">
           <p>
             Vá em preferências de sons, e na aba de saída e de entrada coloque
-            para filetron ou audio adapter
+            para filetron ou audio adapter.
           </p>
           <img src={img_rasp} />
         </Modal.Body>

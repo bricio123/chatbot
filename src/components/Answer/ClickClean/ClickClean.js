@@ -13,7 +13,7 @@ const Headseat = () => {
 <Accordion defaultActiveKey="0">
   <Card>
     <Accordion.Toggle as={Card.Header} eventKey="0">
-      Primera Etapa
+      Primera etapa
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
       <Card.Body>

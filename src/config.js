@@ -28,7 +28,7 @@ const config = {
   },
   initialMessages: [
     createChatBotMessage(
-      `Prazer, meu desenvolvedor está me aperfeiçoando, sou a primeira versão, então  tenha paciência se eu não enteder algumas frases,fale em poucas palavras a sua dúvida`
+      `Prazer, meu desenvolvedor está me aperfeiçoando, sou a primeira versão, então tenha paciência e fale em poucas palavras a sua dúvida!`
     ),
   ],
   state: {

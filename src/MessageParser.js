@@ -47,7 +47,6 @@ class MessageParser {
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer não entra") ||
-      
       lowerCase.includes("problema no dialer") ||
       lowerCase.includes("problema com o dialer") ||
       lowerCase.includes("dialer não responde") ||
@@ -91,14 +90,8 @@ class MessageParser {
       lowerCase.includes("nao recebe chamadas") ||
       lowerCase.includes("dialer nao chama") ||
       lowerCase.includes("dialer esta fora do ar") ||
-      lowerCase.includes("eu nao acesso nada")
-    ) {
-      return this.actionProvider.handleMessageDialerDontWork();
-    }
-    if (
       lowerCase.includes("dialer travou") ||
       lowerCase.includes("dialer nao conecta") ||
-      lowerCase.includes("nao conecta corretamente") ||
       lowerCase.includes("nao conecta corretamente") ||
       lowerCase.includes("agent nao recebe chamadas") ||
       lowerCase.includes("agent nao consegue ouvir as ligações") ||
@@ -109,15 +102,16 @@ class MessageParser {
       lowerCase.includes("nao recebe chamadas") ||
       lowerCase.includes("dialer do agent esta fora") ||
       lowerCase.includes("dialer do agent nao funciona") ||
-      lowerCase.includes("dialer nao chama")
+      lowerCase.includes("dialer nao chama")||
+      lowerCase.includes("eu nao acesso nada")
     ) {
       return this.actionProvider.handleMessageDialerDontWork();
     }
-
+   
     //------------------------------------------------------------------------
 
     //relacionado ao raspberry
-    if (
+    /*if (
       lowerCase.includes("rasp") ||
       lowerCase.includes("raspberry com problema") ||
       lowerCase.includes("raspberry nao funciona") ||
@@ -135,8 +129,8 @@ class MessageParser {
       lowerCase.includes("berry")
     ) {
       return this.actionProvider.handleMessageRaspberry();
-    }
-
+    }*/
+//-------------------------------------------------------------------------------
     //relacionado as senhas
     if (
       lowerCase.includes("nao sei a senha") ||
@@ -242,7 +236,6 @@ class MessageParser {
       lowerCase.includes("eu nao consigo ligar") ||
       lowerCase.includes("o microfone parou de funcionar") ||
       lowerCase.includes("eu nao consigo completar chamada") ||
-      lowerCase.includes("sem interface de fone") ||
       lowerCase.includes("sem som na chamada") ||
       lowerCase.includes("sem som na ligação") ||
       lowerCase.includes("sem som no microfone") ||
@@ -303,7 +296,7 @@ class MessageParser {
       return this.actionProvider.handleMessageHeadseat();
     }
 
-    //relacionado a latencia
+    //relacionado a internet
     if (
    
   
@@ -319,7 +312,7 @@ class MessageParser {
     ) {
       return this.actionProvider.handleMessageLatencia();
     }
-    //relacionado llinks
+    //link do dialer
     if (
       lowerCase.includes("dialer") ||
       lowerCase.includes("onde fica o dialer") ||
@@ -333,7 +326,7 @@ class MessageParser {
       return this.actionProvider.handleMessageLinkDialer();
     } 
 
-    //pontomais
+    //link do pontomais
 
     if (
       lowerCase.includes("preciso do ponto") ||
@@ -346,7 +339,7 @@ class MessageParser {
     }
 
 
-     // basetech
+     //link do basetech
      if (
      
       lowerCase.includes("basetech") ||
