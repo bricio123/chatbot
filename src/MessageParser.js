@@ -65,7 +65,7 @@ class MessageParser {
       lowerCase.includes("dialer nao esta entrando") ||
       lowerCase.includes("dialer nao conecta") ||
       lowerCase.includes("dialer nao liga") ||
-      lowerCase.includes("dialer nao aceita chamadas") ||
+      lowerCase.includes("dialer nao aceita receber chamadas") ||
       lowerCase.includes("agent nao consegue utilizar o dialer") ||
       lowerCase.includes("agent nao consegue ligar") ||
       lowerCase.includes("agent com problema para usar o dialer") ||
@@ -96,7 +96,6 @@ class MessageParser {
       return this.actionProvider.handleMessageDialerDontWork();
     }
     if (
-      lowerCase.includes("fone") ||
       lowerCase.includes("dialer travou") ||
       lowerCase.includes("dialer nao conecta") ||
       lowerCase.includes("nao conecta corretamente") ||
@@ -298,6 +297,7 @@ class MessageParser {
       lowerCase.includes("fone do agent nao funciona como deveria") ||
       lowerCase.includes("ligação do agent nao funciona da maneira correta") ||
       lowerCase.includes("eu nao tenho adaptador de fone") ||
+      lowerCase.includes("cliente nao consegue ouvir") ||
       lowerCase.includes("nao funciona o fone de oduvio")
     ) {
       return this.actionProvider.handleMessageHeadseat();
@@ -305,21 +305,12 @@ class MessageParser {
 
     //relacionado a latencia
     if (
-      lowerCase.includes(
-        "voz do agente demora na hora de falar com o cliente"
-      ) ||
-      lowerCase.includes("voz demora") ||
-      lowerCase.includes("voz") ||
-      lowerCase.includes("dialer demora") ||
-      lowerCase.includes("dialer com lentidao") ||
-      lowerCase.includes("clientes nao escuta agente") ||
-      lowerCase.includes("cliente nao consegue ouvir") ||
+   
+  
       lowerCase.includes("sem internet") ||
       lowerCase.includes("sem acesso a internet") ||
-      lowerCase.includes("internet esta muito ruim") ||
       lowerCase.includes("internet") ||
       lowerCase.includes("sem conexao") ||
-      lowerCase.includes("pontomais nao funciona") ||
       lowerCase.includes("ponto nao funciona") ||
       lowerCase.includes("nao tem conexao") ||
       lowerCase.includes("sem acesso") ||
@@ -332,32 +323,26 @@ class MessageParser {
     if (
       lowerCase.includes("dialer") ||
       lowerCase.includes("onde fica o dialer") ||
-      lowerCase.includes("links importantes") ||
-      lowerCase.includes("links da ti") ||
-      lowerCase.includes("preciso dos links") ||
-      
-      lowerCase.includes("preciso do ponto") ||
       lowerCase.includes("preciso do dialer") ||
-      lowerCase.includes("preciso dos links internos") ||
-     
       lowerCase.includes("preciso entrar no dialer") ||
-      lowerCase.includes("preciso registrar o ponto") ||
-      lowerCase.includes("preciso das senhas") ||
-      lowerCase.includes("preciso do chat") ||
-      lowerCase.includes("senhas") ||
-      lowerCase.includes("senha") ||
       lowerCase.includes("abrir o dialer") ||
-      
-     
       lowerCase.includes("link do dialer") ||
-      lowerCase.includes("pontomais") ||
       lowerCase.includes("commpeak dialer") ||
-      lowerCase.includes("commpeak") ||
-      lowerCase.includes("links") ||
+      lowerCase.includes("commpeak") 
+    ) {
+      return this.actionProvider.handleMessageLinkDialer();
+    } 
+
+    //pontomais
+
+    if (
+      lowerCase.includes("preciso do ponto") ||
+      lowerCase.includes("preciso registrar o ponto") ||
+      lowerCase.includes("pontomais") ||
       lowerCase.includes("ponto") ||
       lowerCase.includes("link do ponto")
     ) {
-      return this.actionProvider.handleMessageLinks();
+      return this.actionProvider.handleMessageLinkPontomais();
     }
 
 
@@ -365,6 +350,7 @@ class MessageParser {
      if (
      
       lowerCase.includes("basetech") ||
+      lowerCase.includes("preciso do chat") ||
       lowerCase.includes("Preciso do basetech")
     ) {
       return this.actionProvider.handleMessageBasetech();

@@ -1,17 +1,19 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import Pontomais from "../../../assets/pontomais/pontomais.png";
 
 
 
 
-
-const Links = () => {
+const LinkPontomais = () => {
     return (
-      <div className="basetech_container">
-       <a href="https://app.pontomaisweb.com.br/#/acessars" target="blank">
-        
+      <div className="pontomais_container">
+       <a href="https://app.pontomaisweb.com.br/#/acessar" target="blank">
+
+           <img src={Pontomais} />
        </a>
       </div>
     );
   };
-  export default Links;
+  export default LinkPontomais;
   
