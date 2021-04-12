@@ -62,8 +62,8 @@ const Services = () => {
         <div className="now-bots">
           <img src={chatbotImg} />
           <p>
-            Conheça nossos bot, cada um tem um proposito, conhece-los vai te
-            ajudar a selecionar o melhor
+            Conheça nossos bot's, cada um tem um proposito, conhece-los vai te
+            ajudar a selecionar o mais eficaz para te ajudar na sua tarefa!
           </p>
           <Link to="/Meetbot">
             <button className="button__go__now">Conhecer bots</button>
