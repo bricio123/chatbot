@@ -88,3 +88,20 @@
 .what__is__news img{
   padding: 15px;
 }
+.what__is__news h4{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 100;
+}
+.newsFeature{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+.newsFeature svg{
+  margin-left: 10px;
+  font-size: 20px;
+  color: var(--green);
+}

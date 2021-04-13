@@ -27,3 +27,7 @@
   font-size: 12px;
 }
 
+.text__all ul{
+  list-style: none;
+  text-align: center;
+}

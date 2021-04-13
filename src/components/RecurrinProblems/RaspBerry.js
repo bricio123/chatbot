@@ -2,10 +2,19 @@ import { Modal, Button, Popover, OverlayTrigger } from "react-bootstrap";
 
 const popover = (
     <Popover id="popover-basic">
-      <Popover.Title as="h3">Popover right</Popover.Title>
-      <Popover.Content>
-        And here's some <strong>amazing</strong> content. It's very engaging.
-        right?
+      <Popover.Title as="h2">Raspberry</Popover.Title>
+      <Popover.Content className='text__all'>
+        <p>Quando um Raspberry travar</p>
+        <ul >
+          <li className='p-2'>Raspberry travou tudo? Digitando o conjunto das teclas Alt + F4, vamos para o terminal</li>
+          <li className='p-2'>Somente tiramos o cabo se não tiver a opção de abrir o terminal com o Alt + f4</li>
+          
+        </ul>
+        <p>Mouse e Teclado não funcionam?</p>
+        <ul>
+          <li className='p-2'>Nesse caso, apenas remova e coloque novamente o cabo de ambos.</li>
+          <li className='p-2'>Caso não funcione, reinicie.</li>
+        </ul>
       </Popover.Content>
     </Popover>
   );

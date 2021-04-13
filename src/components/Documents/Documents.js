@@ -3,15 +3,14 @@ import { Modal, Button, Card, Carousel } from "react-bootstrap";
 import "../Documents/Documents.css";
 import imgCode from "../../assets/img-code.jpeg";
 import imgPlanilha from "../../assets/img-planilha.jpg";
-import imgIp from "../../assets/img-ip.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import favorits from "../../assets/favoritos.jpg";
-import Dialer from "../../assets/logodialer.webp";
 import Basetech from "../../assets/basetech/logobasetech.jpeg";
 import PontoMais from "../../assets/pontomais/Ponto.jpg";
 import NewsFeature from '../../assets/novas.svg';
 import {
-  faBoxOpen
+  faBoxOpen,
+  faArrowRight
 } from "@fortawesome/free-solid-svg-icons";
 
 function MyVerticallyCenteredModal(props) {
@@ -168,7 +167,11 @@ const Documents = () => {
       </div>
       <div className="what__is__news">
         <img src={NewsFeature}/>
-        <h4>Novas feature em breve</h4>
+        <section className='newsFeature'>
+        <h4>Novas implementações em breve</h4>
+        <FontAwesomeIcon icon={faArrowRight}/>
+        </section>
+
       </div>
     </div>
   );

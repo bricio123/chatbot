@@ -8,7 +8,6 @@ class MessageParser {
     const lowerCase = message.toLowerCase();
 
     //rlacionado a apresentação
-   
     
     if (
       lowerCase.includes("ola") ||
@@ -25,6 +24,7 @@ class MessageParser {
       lowerCase.includes("bom dia") ||
       lowerCase.includes("estou com duvida") ||
       lowerCase.includes("duvida") ||
+      lowerCase.includes("ajuda") ||
       lowerCase.includes("oi")
     ) {
       return this.actionProvider.handleMessageParser();

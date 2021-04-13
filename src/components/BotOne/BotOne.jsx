@@ -19,7 +19,9 @@ const BotOne = () => {
           config={config}
           actionProvider={ActionProvider}
           messageParser={MessageParser}
+          placeholderText={"Escreva sua mensagem aqui!"}
         />
+     
       </div>
     </>
   );
