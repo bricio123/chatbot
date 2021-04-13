@@ -1,9 +1,6 @@
 class MessageParser {
   constructor(actionProvider, state) {
     this.actionProvider = actionProvider;
-    // State represents the chatbot state and is passed
-    // in at initalization. You can use it to read chatbot state
-    // inside the messageParser
     this.state = state;
   }
 
@@ -15,14 +12,19 @@ class MessageParser {
     
     if (
       lowerCase.includes("ola") ||
-      lowerCase.includes("tudo bem") ||
       lowerCase.includes("preciso de ajuda") ||
+      lowerCase.includes("como faco") ||
+      lowerCase.includes("eu nao sei ") ||
+      lowerCase.includes("tudo bem") ||
       lowerCase.includes("nao sei com fazer") ||
       lowerCase.includes("estou com duvida") ||
+      lowerCase.includes("me ajuda") ||
       lowerCase.includes("como fazer") ||
-      lowerCase.includes("Boa tarde") ||
-      lowerCase.includes("Boa noite") ||
+      lowerCase.includes("boa tarde") ||
+      lowerCase.includes("boa noite") ||
       lowerCase.includes("bom dia") ||
+      lowerCase.includes("estou com duvida") ||
+      lowerCase.includes("duvida") ||
       lowerCase.includes("oi")
     ) {
       return this.actionProvider.handleMessageParser();
@@ -132,7 +134,7 @@ class MessageParser {
     ) {
       return this.actionProvider.handleMessageVPN();
     }
-
+    
     //relacionado as senhas
     if (
       lowerCase.includes("nao sei a senha") ||
@@ -352,7 +354,7 @@ class MessageParser {
       lowerCase.includes("ponto") ||
       lowerCase.includes("link do ponto")
     ) {
-      return this.actionProvider.handleMessageLinks();
+      return this.actionProvider.handleMessageLinkPontomais();
     }
     return this.actionProvider.handleDefault();
   };

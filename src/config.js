@@ -56,11 +56,7 @@ const config = {
       widgetFunc: (props) => <LinkDialer {...props} />,
       mapStateToProps: ["gist"],
     },
-    {
-      widgetName: "presentation",
-      widgetFunc: (props) => <Presention {...props} />,
-      mapStateToProps: ["gist"],
-    },
+    
     {
       widgetName: "loginList",
       widgetFunc: (props) => <LoginList {...props} />,

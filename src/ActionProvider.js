@@ -17,7 +17,7 @@ class ActionProvider {
   //função que se apreseta e da uma previa de erros recorrentes
   handleMessageParser = () => {
     const messages = this.createChatBotMessage("Olá, qual é sua duvida?", {
-      widget: "presentation",
+      widget: "",
       withAvatar: true,
     });
 
@@ -95,7 +95,6 @@ class ActionProvider {
     }
   };
 
-    
   handleMessagePassaword = () => {
     const messages = this.createChatBotMessage(
       "Todas as senhas estão devidamente cadastradas no basetech, caso não esteja, verifique no documento br2 que está dentro dos arquivos.",
@@ -135,7 +134,6 @@ class ActionProvider {
     this.addMessageToBotState(messages);
   };
 
-
   handleMessageVPN = () => {
     const messages = this.createChatBotMessage(
       "Caso tenha algum problema com a VPN informe ao grupo do basetech.",
@@ -144,7 +142,6 @@ class ActionProvider {
         withAvatar: true,
       }
     );
-
     this.addMessageToBotState(messages);
   };
 
@@ -159,9 +156,6 @@ class ActionProvider {
 
     this.addMessageToBotState(messages);
   };
-
-
-
 
 }
 
