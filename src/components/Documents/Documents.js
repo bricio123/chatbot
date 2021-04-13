@@ -185,7 +185,7 @@ const Documents = () => {
       </div>
       <div className="what__is__news">
         <img src={NewsFeature}/>
-        <h4>Novas feature em breve!</h4>
+        <h4>Novas feature em breve</h4>
       </div>
     </div>
   );

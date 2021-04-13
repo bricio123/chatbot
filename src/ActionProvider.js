@@ -6,9 +6,9 @@ class ActionProvider {
   }
 
   //função que responde com uma imagem com o link do dialer
-  handleMessageLinks = () => {
-    const messages = this.createChatBotMessage("Aqui estão os links importantes ", {
-      widget: "Links",
+  handleMessageLinkDialer = () => {
+    const messages = this.createChatBotMessage("Aqui está o link do Dialer.", {
+      widget: "LinkDialer",
       withAvatar: true,
     });
     this.addMessageToBotState(messages);
@@ -51,7 +51,7 @@ class ActionProvider {
 
   handleMessageLatencia = () => {
     const messages = this.createChatBotMessage(
-      "Caso a conexão com algum site não esteja boa, você pode checar o link da latência!",
+      "Caso a conexão com a internet não esteja funcionando, você pode checar o cabo de rede ou o ponto de acesso. ",
       {
         widget: "latencia",
         withAvatar: true,
@@ -63,7 +63,7 @@ class ActionProvider {
 
   handleMessageHeadseat = () => {
     const messages = this.createChatBotMessage(
-      "Se o audio e o microfone não estiverem funcionando, veja as configuraçãos a seguir",
+      "Se o audio e o microfone não estiverem funcionando, veja as configuraçãos a seguir:",
       {
         widget: "headseat",
         withAvatar: true,
@@ -98,7 +98,7 @@ class ActionProvider {
     
   handleMessagePassaword = () => {
     const messages = this.createChatBotMessage(
-      "Todas as senhas estão devidamente cadastradas no basetech, caso não esteja, verifique no arquivo br2 que está dentro dos documentos.",
+      "Todas as senhas estão devidamente cadastradas no basetech, caso não esteja, verifique no documento br2 que está dentro dos arquivos.",
       {
         widget: "basetech",
         withAvatar: true,
@@ -108,7 +108,10 @@ class ActionProvider {
     this.addMessageToBotState(messages);
   };
     
-  handleMessageRaspberry = () => {
+//------------------------------------------------------------------------------------------------------------------
+  //Comentei o raspbery pois essa parte vai ficar pronta apenas para a próxima versão!
+
+  /*handleMessageRaspberry = () => {
     const messages = this.createChatBotMessage(
       "Todas as informações sobre o raspberry estarão disponíveis aqui:",
       {
@@ -118,7 +121,20 @@ class ActionProvider {
     );
 
     this.addMessageToBotState(messages);
+  };*/
+ //-------------------------------------------------------------------------------------------------------------------   
+  handleMessageLinkPontomais = () => {
+    const messages = this.createChatBotMessage(
+      "Aqui está o link do Pontomais.",
+      {
+        widget: "pontomais",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
   };
+
 
   handleMessageVPN = () => {
     const messages = this.createChatBotMessage(
@@ -131,8 +147,18 @@ class ActionProvider {
 
     this.addMessageToBotState(messages);
   };
-    
 
+  handleMessageBasetech = () => {
+    const messages = this.createChatBotMessage(
+      "Aqui está o link do Basetech.",
+      {
+        widget: "basetech",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
 
 
 

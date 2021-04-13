@@ -45,7 +45,7 @@
 .files__grid {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
 }
 .files__grid div {
   display: flex;
