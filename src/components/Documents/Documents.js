@@ -11,10 +11,7 @@ import Basetech from "../../assets/basetech/logobasetech.jpeg";
 import PontoMais from "../../assets/pontomais/Ponto.jpg";
 import NewsFeature from '../../assets/novas.svg';
 import {
-  faBoxOpen,
-  faFileWord,
-  faCode,
-  faNetworkWired,
+  faBoxOpen
 } from "@fortawesome/free-solid-svg-icons";
 
 function MyVerticallyCenteredModal(props) {
@@ -31,21 +28,7 @@ function MyVerticallyCenteredModal(props) {
       <Modal.Body>
         <p>Aqui estão alguns arquivos que usamos</p>
         <div className="files__grid">
-          <div>
-            <Card>
-              <Card.Img variant="top" src={imgIp} />
-              <Card.Body>
-                <Card.Title>Mapeamento de Ip`s</Card.Title>
-                <Card.Text>
-                  Fazemos um mapeamento de ips em todas as raspberry para que
-                  nao tenha conflito de ips.
-                </Card.Text>
-                <a href={imgCode} download={imgCode}>
-                  <Button variant="primary">Baixar</Button>
-                </a>
-              </Card.Body>
-            </Card>
-          </div>
+          
           <div>
             <Card>
               <Card.Img variant="top" src={imgPlanilha} />

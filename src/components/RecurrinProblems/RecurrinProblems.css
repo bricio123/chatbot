@@ -7,8 +7,9 @@
 }
 .list__err {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  grid-template-columns: 1fr 1fr ;
+  height: 100%;
   color: var(--white);
   margin: 5px;
 }
@@ -18,7 +19,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   border-radius: 5px;
   margin: 5px;
   transition: 0.5s ease all;
@@ -26,6 +26,4 @@
 .list__err li p {
   font-size: 12px;
 }
-.list__err li:hover {
-  background: var(--link);
-}
+
