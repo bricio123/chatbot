@@ -1,13 +1,13 @@
 .Container-jumbotron {
-  height: calc(100% - 70px);
+  height: 100% !important;
   width: 100%;
   text-align: center;
   padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
- 
+  justify-content: center; 
+  
 }
 .Container-jumbotron h1 {
   font-size: 5rem;
@@ -32,4 +32,16 @@
   background:#000 ;
   color: #fff;
   
+}
+.font{
+  font-family: inherit;
+}
+
+.font2{
+  font-family: inherit;
+}
+
+.red{
+  background: var(--link);
+
 }

@@ -27,5 +27,5 @@
   font-size: 12px;
 }
 .list__err li:hover {
-  background: var(--mention-detail);
+  background: var(--link);
 }

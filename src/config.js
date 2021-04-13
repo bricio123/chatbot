@@ -1,12 +1,15 @@
 import React from "react";
 import { createChatBotMessage } from "react-chatbot-kit";
-
 import Presention from "./components/Answer/presentation/presentation";
 import MessageParser from "./MessageParser";
 import ActionProvider from "./ActionProvider";
 import ClickClean from "./components/Answer/ClickClean/ClickClean";
 import LoginList from "./components/Answer/LoginList/LoginList";
-import Links from "./components/Answer/Action/Action";
+import LinkDialer from "./components/Answer/Action/Action";
+import KillProcess from "./components/Answer/KillProcess/KillProcess";
+import Basetech from "./components/Answer/Basetech/Basetech";
+import Raspberry from "./components/Answer/Raspberry/Raspberry";
+import Pontomais from "./components/Answer/Pontomais/Pontomais";
 import Headseat from "./components/Answer/Headseat/Headseat";
 import "./GlobalStyles.css";
 
@@ -20,12 +23,12 @@ const config = {
       backgroundColor: "var(--link)",
     },
     chatButton: {
-      backgroundColor: "#0ea700",
+      backgroundColor: "var(--link)",
     },
   },
   initialMessages: [
     createChatBotMessage(
-      `Prazer, meu desenvolvedor está me aperfeiçoando, sou a primeira versão, então  tenha paciência se eu não enteder algumas frases,fale em poucas palavras a sua dúvida`
+      `Prazer, meu desenvolvedor está me aperfeiçoando, sou a primeira versão, então tenha paciência e fale em poucas palavras a sua dúvida!`
     ),
   ],
   state: {
@@ -39,13 +42,18 @@ const config = {
       mapStateToProps: ["gist"],
     },
     {
+      widgetName: "killProcess",
+      widgetFunc: (props) => <KillProcess {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
       widgetName: "latencia",
       widgetFunc: (props) => <></>,
       mapStateToProps: ["gist"],
     },
     {
-      widgetName: "Links",
-      widgetFunc: (props) => <Links {...props} />,
+      widgetName: "LinkDialer",
+      widgetFunc: (props) => <LinkDialer {...props} />,
       mapStateToProps: ["gist"],
     },
     {
@@ -69,8 +77,33 @@ const config = {
       mapStateToProps: ["gist"],
     },
     {
+      widgetName: "basetech",
+      widgetFunc: (props) => <Basetech {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
+      widgetName: "raspberry",
+      widgetFunc: (props) => <Raspberry {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
+      widgetName: "vpn",
+      widgetFunc: (props) => <></>,
+      mapStateToProps: ["gist"],
+    },
+    {
+      widgetName: "pontomais",
+      widgetFunc: (props) => <Pontomais {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
       widgetName: "headseat",
       widgetFunc: (props) => <Headseat {...props} />,
+      mapStateToProps: ["gist"],
+    },
+    {
+      widgetName: "basetech",
+      widgetFunc: (props) => <Basetech {...props} />,
       mapStateToProps: ["gist"],
     },
   ],

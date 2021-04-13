@@ -87,7 +87,7 @@
   font-size: 13px;
   border-radius: 5px;
   color: var(--white);
-  background-color: var(--mention-detail);
+  background-color: var(--green);
   transition: background-color 0.5s;
 }
 .button__go__now:hover {
