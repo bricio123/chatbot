@@ -11,22 +11,8 @@ class MessageParser {
     const lowerCase = message.toLowerCase();
 
     //rlacionado a apresentação
-    if (
-      lowerCase.includes("skype parou") ||
-      lowerCase.includes("google parou") ||
-      lowerCase.includes("aplicativo parou") ||
-      lowerCase.includes("aplicativo esta carregando e nao entra") ||
-      lowerCase.includes("any desk parou") ||
-      lowerCase.includes("travou") ||
-      lowerCase.includes("skype") ||
-      lowerCase.includes("google") ||
-      lowerCase.includes("chromium") ||
-      lowerCase.includes("skype travou") ||
-      lowerCase.includes("google travou") ||
-      lowerCase.includes("chromium travou")
-    ) {
-      return this.actionProvider.handleMessageKillProcess();
-    }
+   
+    
     if (
       lowerCase.includes("ola") ||
       lowerCase.includes("tudo bem") ||
@@ -47,7 +33,6 @@ class MessageParser {
       lowerCase.includes("dialer nao funciona") ||
       lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer não entra") ||
-      
       lowerCase.includes("problema no dialer") ||
       lowerCase.includes("problema com o dialer") ||
       lowerCase.includes("dialer não responde") ||
@@ -64,6 +49,8 @@ class MessageParser {
       lowerCase.includes("dialer nao esta funcionando") ||
       lowerCase.includes("dialer nao esta entrando") ||
       lowerCase.includes("dialer nao conecta") ||
+      lowerCase.includes("dialer esta fora") ||
+      lowerCase.includes("dialer esta com problema") ||
       lowerCase.includes("dialer nao liga") ||
       lowerCase.includes("dialer nao aceita chamadas") ||
       lowerCase.includes("agent nao consegue utilizar o dialer") ||
@@ -91,12 +78,8 @@ class MessageParser {
       lowerCase.includes("nao recebe chamadas") ||
       lowerCase.includes("dialer nao chama") ||
       lowerCase.includes("dialer esta fora do ar") ||
-      lowerCase.includes("eu nao acesso nada")
-    ) {
-      return this.actionProvider.handleMessageDialerDontWork();
-    }
-    if (
-      lowerCase.includes("fone") ||
+      lowerCase.includes("eu nao acesso nada") ||
+      lowerCase.includes("dialer nao carrega") ||
       lowerCase.includes("dialer travou") ||
       lowerCase.includes("dialer nao conecta") ||
       lowerCase.includes("nao conecta corretamente") ||
@@ -117,7 +100,7 @@ class MessageParser {
 
     //------------------------------------------------------------------------
 
-    //relacionado ao raspberry
+    //relacionado ao raspberr
     if (
       lowerCase.includes("rasp") ||
       lowerCase.includes("raspberry com problema") ||
@@ -136,6 +119,18 @@ class MessageParser {
       lowerCase.includes("berry")
     ) {
       return this.actionProvider.handleMessageRaspberry();
+    }
+    
+ if (
+     lowerCase.includes("VPN") ||
+     lowerCase.includes("VPN nao entra") ||
+     lowerCase.includes("VPN nao funciona") ||
+     lowerCase.includes("vpn") ||
+     lowerCase.includes("problema com a vpn") ||
+     lowerCase.includes("VPN nao conecta") ||
+     lowerCase.includes("sem vpn")
+    ) {
+      return this.actionProvider.handleMessageVPN();
     }
 
     //relacionado as senhas
@@ -281,7 +276,7 @@ class MessageParser {
       lowerCase.includes("ligação do agent") ||
       lowerCase.includes("problema de ligação") ||
       lowerCase.includes("problema de som") ||
-      lowerCase.includes("dialer com problema de ligação") ||
+      lowerCase.includes("problema de ligação") ||
       lowerCase.includes("problema na chamada") ||
       lowerCase.includes("dialer com problema na chamada") ||
       lowerCase.includes("dialer nao conecta chamada") ||

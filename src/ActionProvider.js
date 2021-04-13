@@ -119,6 +119,18 @@ class ActionProvider {
 
     this.addMessageToBotState(messages);
   };
+
+  handleMessageVPN = () => {
+    const messages = this.createChatBotMessage(
+      "Caso tenha algum problema com a VPN informe ao grupo do basetech.",
+      {
+        widget: "vpn",
+        withAvatar: true,
+      }
+    );
+
+    this.addMessageToBotState(messages);
+  };
     
 
 

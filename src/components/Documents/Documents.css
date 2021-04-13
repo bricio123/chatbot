@@ -33,9 +33,8 @@
 }
 .Container__info {
   border-radius: 10px;
-  width: 80%;
-  height: 40%;
-  background: var(--senary);
+  width: 90%;
+  height: 55%;
 }
 /*modal*/
 .modal-content {
@@ -60,12 +59,32 @@
   box-shadow: 1px 1px 20px 0px #000;
   margin: 10px;
 }
-
-.card > img {
-  width: 100%;
-  height: 50% !important;
+.carousel-control-prev {
+  display: none !important;
 }
-.card .card-text{
-  height: 100%;
-  font-size: 12px;
+.carousel-control-next {
+  display: none !important;
+}
+.carousel-indicators {
+  display: none !important;
+}
+.carousel-item img {
+  border-radius: 10px;
+}
+.texts__title {
+  text-align: center;
+  color: var(--white);
+}
+
+.what__is__news {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 140px;
+  border-radius: 10px;
+  background: var(--senary);
+  color:var(--white);
+}
+.what__is__news img{
+  padding: 15px;
 }

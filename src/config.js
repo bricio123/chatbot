@@ -90,6 +90,11 @@ const config = {
       mapStateToProps: ["gist"],
     },
     {
+      widgetName: "vpn",
+      widgetFunc: (props) => <></>,
+      mapStateToProps: ["gist"],
+    },
+    {
       widgetName: "pontomais",
       widgetFunc: (props) => <Pontomais {...props} />,
       mapStateToProps: ["gist"],

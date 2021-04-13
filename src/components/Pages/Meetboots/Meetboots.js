@@ -12,7 +12,7 @@ export default function Meetboots() {
               Conheça cada um dos nossos bots!
             </h1>
             <p>
-              Bom sabemos que nosso tempo e corrido então nós da Basetech criamos bots para solucionar perca de tempo e de informação criando bots inteligentes, que vai te auxiliar nas dúvidas recorrentes de problemas.
+              Bom, sabemos que nosso tempo é corrido então nós da Basetech criamos bots para solucionar perda de tempo e de informação, criando bots inteligentes, que vai te auxiliar nas dúvidas recorrentes de problemas.
             </p>
           </div>
           <div className='img__meetbot'>

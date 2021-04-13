@@ -1,5 +1,5 @@
 .Container-jumbotron {
-  height: calc(100% - 70px);
+  height: 100% !important;
   width: 100%;
   text-align: center;
   padding: 50px;
