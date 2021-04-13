@@ -4,7 +4,7 @@ import "../Documents/Documents.css";
 import { Link } from "react-router-dom";
 import imgCode from '../../assets/img-code.jpeg';
 import imgPlanilha from '../../assets/img-planilha.jpg';
-import imgIp from '../../assets/img-ip.jpeg';
+import imgP from '../../assets/documentopadrao.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import favorits from "../../assets/favoritos.jpg";
 import {
@@ -28,30 +28,16 @@ function MyVerticallyCenteredModal(props) {
       <Modal.Body>
         <p>Aqui estão alguns arquivos que usamos</p>
         <div className="files__grid">
-          <div>
-            <Card >
-              <Card.Img variant="top" src={imgIp} />
-              <Card.Body>
-                <Card.Title>Mapeamento de Ip`s</Card.Title>
-                <Card.Text>
-                  Fazemos um mapeamento de ips em todas as raspberry para que nao tenha conflito de ips.
-                </Card.Text>
-                <a href={imgCode} download={imgCode}>
-
-                <Button variant="primary">Baixar</Button>
-                </a>
-              </Card.Body>
-            </Card>
-          </div>
+          
           <div>
             <Card >
               <Card.Img variant="top" src={imgPlanilha  }/>
               <Card.Body>
-                <Card.Title>Login dos agentes</Card.Title>
+                <Card.Title>Login dos agents</Card.Title>
                 <Card.Text>
-                  As vezes na hora de logar pode ser que não dê certo, então temos os logins e senhas de cada um para você verificar se está tudo certo
+                  As vezes na hora de logar pode ser que não dê certo, então temos os logins e senhas de cada um para você verificar se está correto.
                 </Card.Text>
-                <Button variant="primary">Baixar</Button>
+                <Button variant="primary">Download</Button>
               </Card.Body>
             </Card>
           </div>
@@ -61,9 +47,9 @@ function MyVerticallyCenteredModal(props) {
               <Card.Body>
                 <Card.Title>Script</Card.Title>
                 <Card.Text>
-                    Uma mão amiga, os nossos scripts te ajudam e facilita na hora de fazer coisa que na mão seria um pouco demorado.
+                    Uma mão amiga, os nossos scripts te ajudam e facilitam na hora de fazer coisas que poderiam ser um pouco demoradas.
                 </Card.Text>
-                <Button variant="primary">Baixar</Button>
+                <Button variant="primary">Download</Button>
               </Card.Body>
             </Card>
           </div>
@@ -73,10 +59,10 @@ function MyVerticallyCenteredModal(props) {
               <Card.Body>
                 <Card.Title>Favoritos</Card.Title>
                 <Card.Text>
-                  Aqui você pode importar os favoritos para da área de trabalho para o seu navegador. 
+                  Aqui você pode importar os favoritos para da área de trabalho do seu navegador. 
                 
                 </Card.Text>
-                <Button variant="primary">Baixar</Button>
+                <Button variant="primary">Download</Button>
               </Card.Body>
             </Card>
           </div>
@@ -111,7 +97,7 @@ const Documents = () => {
   return (
     <div className="Documents_container">
       <div className="Documentes__itens__save">
-        <span>Arquivos</span>
+        <span>ARQUIVOS</span>
         <App />
       </div>
       <div className="Container__info"></div>
