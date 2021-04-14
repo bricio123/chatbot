@@ -13,7 +13,7 @@ import Pontomais from "./components/Answer/Pontomais/Pontomais";
 import Headseat from "./components/Answer/Headseat/Headseat";
 import "./GlobalStyles.css";
 
-const botName = "Patricia";
+const botName = "Mônica";
 
 const config = {
   botName: botName,
