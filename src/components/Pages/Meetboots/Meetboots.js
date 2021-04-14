@@ -28,7 +28,11 @@ export default function Meetboots() {
           </ul>
       </div>
       <div className='paralax'>
-        
+        <section className='img__container'>
+            <div className='container'>
+              
+            </div>
+        </section>
       </div>
 
 

@@ -5,6 +5,7 @@ import Network from "../RecurrinProblems/Network";
 import Dialer from "../RecurrinProblems/Dialer";
 import Browser from "../RecurrinProblems/Browser";
 import Headseat from "../RecurrinProblems/Headseat";
+import Login from '../RecurrinProblems/Login'
 const RecurrinProblems = () => (
   <>
     <div className="bots__list__err">
@@ -25,6 +26,9 @@ const RecurrinProblems = () => (
 
         <li>
           <Headseat />
+        </li>
+        <li>
+          <Login />
         </li>
       </ul>
     </div>

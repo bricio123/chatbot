@@ -5,10 +5,14 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const popover = (
   <Popover id="popover-basic">
-    <Popover.Title as="h3">Popover right</Popover.Title>
+    <Popover.Title as="h3">Login</Popover.Title>
     <Popover.Content>
-      And here's some <strong>amazing</strong> content. It's very engaging.
-      right?
+      <p>
+        Se o login de alguém não estiver funcionando, temos arquivos chamado BR2
+        que está nos aquivos aqui mesmo na parte de arquivos, baixe olhe onde
+        está o login de quem você precisa e tente logar, caso nao funcione entre
+        em contato com alguem que consiga cadastrar esse usuário.
+      </p>
     </Popover.Content>
   </Popover>
 );
