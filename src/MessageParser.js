@@ -324,8 +324,51 @@ class MessageParser {
       lowerCase.includes("nao carrega pagina")
     ) {
       return this.actionProvider.handleMessageLatencia();
-    }
+    } 
     //relacionado llinks
+    if (
+      lowerCase.includes("dialer") ||
+      lowerCase.includes("onde fica o dialer") ||
+      lowerCase.includes("preciso do basetech") ||
+      lowerCase.includes("preciso do dialer") ||
+      lowerCase.includes("basetech") ||
+      lowerCase.includes("preciso entrar no dialer") ||
+      lowerCase.includes("preciso das senhas") ||
+      lowerCase.includes("preciso do chat") ||
+      lowerCase.includes("senhas") ||
+      lowerCase.includes("senha") ||
+      lowerCase.includes("abrir o dialer") ||
+      lowerCase.includes("abrir basetech") ||
+      lowerCase.includes("link do basetech") ||
+      lowerCase.includes("link do dialer") ||
+      lowerCase.includes("commpeak dialer") ||
+      lowerCase.includes("commpeak") 
+     
+    ) {
+      return this.actionProvider.handleMessageLinkDialer();
+    }
+
+
+
+    if (
+      
+      lowerCase.includes("preciso do basetech") ||
+      lowerCase.includes("basetech") ||
+      lowerCase.includes("preciso das senhas") ||
+      lowerCase.includes("preciso do chat") ||
+      lowerCase.includes("senhas") ||
+      lowerCase.includes("senha") ||
+      lowerCase.includes("abrir basetech") ||
+      lowerCase.includes("link do basetech") 
+
+    ) {
+      return this.actionProvider.handleMessageLinkBasetech();
+    }
+
+
+
+
+
     if (
       lowerCase.includes("dialer") ||
       lowerCase.includes("onde fica o dialer") ||
