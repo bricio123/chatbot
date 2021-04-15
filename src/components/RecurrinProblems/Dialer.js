@@ -5,10 +5,10 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const popover = (
   <Popover id="popover-basic">
-    <Popover.Title as="h3">Popover right</Popover.Title>
+    <Popover.Title as="h3">Dialer</Popover.Title>
     <Popover.Content>
-      And here's some <strong>amazing</strong> content. It's very engaging.
-      right?
+      Caso a chamada do Dialer continue com problema após o <strong>passo a passo de limpeza, </strong> 
+      vefirique a ossibilidade de haver problema na linha do cliente, ou se pode haver problemas no servidor do Dialer, causando instabilidade. 
     </Popover.Content>
   </Popover>
 );
