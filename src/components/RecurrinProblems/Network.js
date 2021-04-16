@@ -7,7 +7,7 @@ const popover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3">Internet</Popover.Title>
     <Popover.Content>
-      Caso fique sem Internet siga o<strong>passo a passo </strong> Se não der certo, verifique a latencia.
+      Caso fique sem Internet siga o<strong>passo a passo</strong> Se não der certo, verifique a latencia.
     </Popover.Content>
   </Popover>
 );
