@@ -1,6 +1,6 @@
 import React from "react";
 import { createChatBotMessage } from "react-chatbot-kit";
-import Presention from "./components/Answer/presentation/presentation";
+
 import MessageParser from "./MessageParser";
 import ActionProvider from "./ActionProvider";
 import ClickClean from "./components/Answer/ClickClean/ClickClean";
@@ -29,7 +29,12 @@ const config = {
   initialMessages: [
     createChatBotMessage(
       `Prazer, meu desenvolvedor está me aperfeiçoando, sou a primeira versão, então tenha paciência e fale em poucas palavras a sua dúvida!`
-    ),
+      ),
+      {
+        widgetName: "CheckList",
+        widgetFunc: (props) => <handleMessageInitialMessagem {...props} />,
+        mapStateToProps: ["gist"],
+      },
   ],
   state: {
     gist: "",
