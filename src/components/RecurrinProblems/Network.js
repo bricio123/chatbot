@@ -5,10 +5,9 @@ import { faNetworkWired } from "@fortawesome/free-solid-svg-icons";
 
 const popover = (
   <Popover id="popover-basic">
-    <Popover.Title as="h3">Popover right</Popover.Title>
+    <Popover.Title as="h3">Internet</Popover.Title>
     <Popover.Content>
-      And here's some <strong>amazing</strong> content. It's very engaging.
-      right?
+      Caso fique sem Internet siga o<strong>passo a passo</strong> Se não der certo, verifique a latencia.
     </Popover.Content>
   </Popover>
 );

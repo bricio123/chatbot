@@ -4,7 +4,14 @@ class ActionProvider {
     this.setState = setStateFunc;
     this.createClientMessage = createClientMessage;
   }
-
+//mensagem inicial
+handleMessageInitialMessagem = () => {
+  const messages = this.createChatBotMessage("Você já verificou tudo?", {
+    widget: "CheckList",
+    withAvatar: true,
+  });
+  this.addMessageToBotState(messages);
+};
   //função que responde com uma imagem com o link do dialer
   handleMessageLinkDialer = () => {
     const messages = this.createChatBotMessage("Aqui está o link do Dialer.", {

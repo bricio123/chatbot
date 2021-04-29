@@ -1,4 +1,4 @@
-import { Modal, Button, Popover, OverlayTrigger } from "react-bootstrap";
+import {  Button, Popover, OverlayTrigger } from "react-bootstrap";
 
 const popover = (
     <Popover id="popover-basic">

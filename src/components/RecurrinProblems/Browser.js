@@ -5,10 +5,9 @@ import { faHeadphonesAlt } from "@fortawesome/free-solid-svg-icons";
 
 const popover = (
   <Popover id="popover-basic">
-    <Popover.Title as="h3">Popover right</Popover.Title>
+    <Popover.Title as="h3">Fone de ouvido</Popover.Title>
     <Popover.Content>
-      And here's some <strong>amazing</strong> content. It's very engaging.
-      right?
+      Caso o fone de ouvido pare de funcionar, realize o teste de microfone <strong>Mic Test</strong> Se o teste mostrar que o equipamente está funcionando, verifique a configuração.
     </Popover.Content>
   </Popover>
 );

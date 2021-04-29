@@ -8,8 +8,8 @@ const popover = (
     <Popover.Title as="h3">Login</Popover.Title>
     <Popover.Content>
       <p>
-        Se o login de alguém não estiver funcionando, temos arquivos chamado BR2
-        que está nos aquivos aqui mesmo na parte de arquivos, baixe olhe onde
+        Se o login de alguém não estiver funcionando, temos o documento chamado BR2
+        que está aqui mesmo na parte de arquivos, baixe olhe onde
         está o login de quem você precisa e tente logar, caso nao funcione entre
         em contato com alguem que consiga cadastrar esse usuário.
       </p>
